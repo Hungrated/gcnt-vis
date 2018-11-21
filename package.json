@@ -9,6 +9,7 @@
   "dependencies": {
     "antd": "^3.10.8",
     "dva": "^2.4.1",
+    "echarts": "^4.2.0-rc.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },

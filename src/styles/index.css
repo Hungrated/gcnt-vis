@@ -26,10 +26,11 @@ body, textarea, select, input {
 body {
   width: 100%;
   min-width: 1090px;
-  min-height: 500px;
+  min-height: 100vh;
   height: auto;
   position: relative;
   z-index: 1;
+  padding-bottom: 25px;
 }
 
 a, button {

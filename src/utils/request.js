@@ -25,6 +25,8 @@ function checkStatus (response) {
  */
 export default function request (url, options) {
 
+  const fullUrl = '' + url;
+
   const defaultOptions = {
     credentials: 'include'
   };
@@ -36,9 +38,9 @@ export default function request (url, options) {
     ...newOptions.headers
   };
 
-  return fetch(url, newOptions).
-    then(checkStatus).
-    then(parseJSON).
-    then(data => ({data})).
-    catch(err => ({err}));
+  return fetch(fullUrl, newOptions)
+    .then(checkStatus)
+    .then(parseJSON)
+    .then(data => ({data}))
+    .catch(err => ({err}));
 }

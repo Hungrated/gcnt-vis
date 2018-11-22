@@ -1,15 +1,17 @@
 import React from 'react';
 import styles from '../styles/IndexMap.less';
+// import ReactEcharts from 'echarts-for-react';
+// import 'echarts';
 
-const IndexMap = () => {
+const IndexMap = ({data}) => {
+
   return (
     <div className={styles['g-map']}>
-      IndexMap
+      map
     </div>
   );
 };
 
-IndexMap.propTypes = {
-};
+IndexMap.propTypes = {};
 
 export default IndexMap;

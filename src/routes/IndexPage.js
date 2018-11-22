@@ -4,36 +4,51 @@ import styles from '../styles/IndexPage.less';
 
 import IndexMap from '../components/IndexMap';
 
-const mapStateToProps = (state) => {
-  return {
-    data: state.data
-  };
-};
+// const mapStateToProps = (state) => {
+//   return {
+//     data: state.data
+//   };
+// };
+
+const mapStateToProps = ({ index }) => ({
+  index,
+});
+
+const mapDispatchToProps = dispatch => ({
+  dispatch,
+  dispatcher: {
+    index: {
+      fetch: payload => dispatch({ type: 'index/fetch', payload }),
+    },
+  },
+});
 
 class IndexPage extends PureComponent {
-  state = {
-    data: {
-      airportsFields: [],
-      airlineFields: [],
-      airports: [],
-      airlines: [],
-      routes: []
-    }
-  };
+  // state = {
+  //   data: {
+  //     airportsFields: [],
+  //     airlineFields: [],
+  //     airports: [],
+  //     airlines: [],
+  //     routes: []
+  //   }
+  // };
 
   componentDidMount () {
-    this.props.dispatch({
-      type: 'index/fetch',
-      payload: {}
-    });
+    // this.props.dispatch({
+    //   type: 'index/fetch',
+    //   payload: {}
+    // });
+    this.props.dispatcher.index.fetch();
   }
 
   render () {
-    console.log(this.state);
-
+    // console.log(this.state);
+    const { index: { data } } = this.props;
+    console.log('data is', data);
     return (
       <div className={styles['g-main']}>
-        <IndexMap data={this.state.data}/>
+        <IndexMap data={data}/>
         <p className={styles['m-slogan']}>GCNT-Vis: Visualization and analysis
           of global core network topology
           information.</p>
@@ -44,4 +59,4 @@ class IndexPage extends PureComponent {
 
 IndexPage.propTypes = {};
 
-export default connect(mapStateToProps)(IndexPage);
+export default connect(mapStateToProps, mapDispatchToProps)(IndexPage);

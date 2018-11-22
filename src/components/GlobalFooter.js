@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/GlobalFooter.scss';
+import styles from '../styles/GlobalFooter.less';
 
 const GlobalFooter = () => {
   return (

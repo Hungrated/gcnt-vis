@@ -22,6 +22,11 @@ function RouterConfig ({history, app}) {
       path: '/index',
       models: () => [require('./models/IndexModel')],
       component: () => require('./routes/IndexPage')
+    },
+    {
+      path: '/relation',
+      models: () => [require('./models/RelationModel')],
+      component: () => require('./routes/RelationPage')
     }
   ];
 

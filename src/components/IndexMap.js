@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../styles/IndexMap.less';
 import ReactEcharts from 'echarts-for-react';
 import 'echarts/extension/bmap/bmap';
-import 'echarts-gl';
 
 const IndexMap = ({data}) => {
 
@@ -150,18 +149,18 @@ const IndexMap = ({data}) => {
 
         coordinateSystem: 'bmap',
 
-        effect: {
-          show: true,
-          trailWidth: 0.01,
-          trailOpacity: 0.1,
-          trailLength: 0.01,
-          constantSpeed: 7
-        },
+        // effect: {
+        //   show: true,
+        //   trailWidth: 0.01,
+        //   trailOpacity: 0.1,
+        //   trailLength: 0.01,
+        //   constantSpeed: 7
+        // },
 
         blendMode: 'lighter',
 
         lineStyle: {
-          width: 0.3,
+          width: 1,
           opacity: 0.03
         },
 

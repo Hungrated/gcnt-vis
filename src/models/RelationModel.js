@@ -1,4 +1,4 @@
-import { queryRelationChartData } from '../services/RelationChart.js';
+import { queryRelationChartData } from '../services/RequestApi';
 
 export default {
 

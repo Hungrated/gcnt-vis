@@ -1,27 +1,27 @@
 import React from 'react';
 import ReactEcharts from 'echarts-for-react';
 
-const RelationChart = ({ data }) => {
+const RelationChart = ({data}) => {
   const graph = data;
 
   var categories = [];
-    for (var i = 0; i < 19; i++) {
-        categories[i] = {
-            name: '类目' + (i+1)
-        };
-    }
+  for (var i = 0; i < 19; i++) {
+    categories[i] = {
+      name: '类目' + (i + 1)
+    };
+  }
 
   graph.nodes.forEach(function (node) {
-        node.itemStyle = null;
-        node.value = node.symbolSize;
-        node.symbolSize /= 50000;
-        node.value /= 50000;
-        node.label = {
-            normal: {
-                show: node.symbolSize > 30
-            }
-        };
-    });
+    node.itemStyle = null;
+    node.value = node.symbolSize;
+    node.symbolSize /= 50000;
+    node.value /= 50000;
+    node.label = {
+      normal: {
+        show: node.symbolSize > 30
+      }
+    };
+  });
   const getOption = () => {
     return {
       title: {
@@ -31,17 +31,18 @@ const RelationChart = ({ data }) => {
         left: 'right'
       },
       tooltip: {},
-      legend: [{
-        // selectedMode: 'single',
-        data: categories.map(function (a) {
+      legend: [
+        {
+          // selectedMode: 'single',
+          data: categories.map(function (a) {
             return a.name;
-        })
-      }],
+          })
+        }],
       animationDuration: 1500,
       animationEasingUpdate: 'quinticInOut',
       series: [
         {
-          name: '节点',
+          name: '结点',
           type: 'graph',
           layout: 'none',
           data: graph.nodes,
@@ -73,18 +74,18 @@ const RelationChart = ({ data }) => {
         }
       ]
     };
-  }
+  };
   return (
     <div>
       <ReactEcharts
         option={getOption()}
         notMerge={true}
         lazyUpdate={true}
-        style={{width: '100%', height:'calc(100vh - 70px)'}}
+        style={{width: '100%', height: 'calc(100vh - 70px)'}}
       />
     </div>
   );
-}
+};
 
 RelationChart.propTypes = {};
 

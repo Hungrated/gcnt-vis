@@ -13,9 +13,31 @@
     padding: 2px 0;
     display: inline-block;
 
-    .m-inner {
+    .inner {
       display: inline-block;
       height: 41px;
+    }
+  }
+
+  .m-nav {
+    display: inline-block;
+    vertical-align: top;
+    width: 500px;
+    height: 45px;
+    margin-left: 20px;
+
+    .item {
+      display: inline-block;
+      padding: 0 15px;
+      font-size: 18px;
+      color: #aaaaaa;
+      cursor: pointer;
+      transition: all 350ms;
+
+      &:hover {
+        color: #efefef;
+        background: #999999;
+      }
     }
   }
 }

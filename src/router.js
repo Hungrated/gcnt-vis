@@ -19,12 +19,7 @@ function RouterConfig ({history, app}) {
       component: () => require('./routes/IndexPage')
     },
     {
-      path: '/index',
-      models: () => [require('./models/IndexModel')],
-      component: () => require('./routes/IndexPage')
-    },
-    {
-      path: '/relation',
+      path: '/relations',
       models: () => [require('./models/RelationModel')],
       component: () => require('./routes/RelationPage')
     }
@@ -35,6 +30,7 @@ function RouterConfig ({history, app}) {
       <GlobalHeader/>
       <Router history={history}>
         <Switch>
+          {/*<Route path="/" exact render={() => <Redirect to="/index" />} />*/}
           {
             routes.map(({path, ...dynamics}, key) => (
               <Route key={key}

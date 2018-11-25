@@ -26,6 +26,7 @@ class IndexPage extends PureComponent {
   render () {
     const { index: { data } } = this.props;
     return (
+      JSON.stringify(data) !== '{}' &&
       <div className={styles['g-main']}>
         <IndexMap data={data}/>
       </div>

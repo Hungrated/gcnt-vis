@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 
 import RelationChart from '../components/RelationChart';
+import styles from '../styles/RelationPage.less';
 
 const mapStateToProps = ({ relation }) => ({
   relation,
@@ -27,7 +28,7 @@ class RelationPage extends PureComponent {
     // console.log('data2 is', data);
     return (
       JSON.stringify(data) !== '{}' &&
-      <div>
+      <div className={styles['g-map']}>
         <RelationChart data={data}/>
       </div>
     );

@@ -7,11 +7,6 @@ import GlobalFooter from './components/GlobalFooter';
 
 function RouterConfig ({history, app}) {
 
-  // const error = dynamic({
-  //   app,
-  //   component: () => import('./routes/ErrorPage')
-  // });
-
   const commonModels = [require('./models/GlobalHeaderModel')];
 
   const routes = [
@@ -39,6 +34,11 @@ function RouterConfig ({history, app}) {
       path: '/help',
       models: () => [...commonModels, require('./models/RelationModel')],
       component: () => require('./routes/RelationPage')
+    },
+    {
+      path: '/error',
+      models: () => [...commonModels],
+      component: () => require('./routes/ErrorPage')
     }
   ];
 
@@ -47,7 +47,7 @@ function RouterConfig ({history, app}) {
       <GlobalHeader/>
       <Router history={history}>
         <Switch>
-          <Route path={'/'} exact render={() => <Redirect to={'index'} />} />
+          <Route path={'/'} exact render={() => <Redirect to={'/index'} />} />
           {
             routes.map(({path, ...dynamics}, key) => (
               <Route key={key}
@@ -60,6 +60,7 @@ function RouterConfig ({history, app}) {
               />
             ))
           }
+          <Route path={'/'} render={() => <Redirect to={'/error'} />} />
         </Switch>
       </Router>
       <GlobalFooter/>

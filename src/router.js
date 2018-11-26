@@ -11,7 +11,7 @@ function RouterConfig ({history, app}) {
 
   const routes = [
     {
-      path: '/index',
+      path: '/home',
       models: () => [...commonModels, require('./models/IndexModel')],
       component: () => require('./routes/IndexPage')
     },
@@ -47,7 +47,7 @@ function RouterConfig ({history, app}) {
       <GlobalHeader/>
       <Router history={history}>
         <Switch>
-          <Route path={'/'} exact render={() => <Redirect to={'/index'} />} />
+          <Route path={'/'} exact render={() => <Redirect to={'/home'} />} />
           {
             routes.map(({path, ...dynamics}, key) => (
               <Route key={key}

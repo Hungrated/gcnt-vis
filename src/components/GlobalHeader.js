@@ -19,8 +19,8 @@ const mapDispatchToProps = dispatch => ({
 
 const navItems = [
   {
-    tlt: 'INDEX',
-    link: '/index'
+    tlt: 'HOME',
+    link: '/home'
   },
   {
     tlt: 'RELATIONS',
@@ -31,7 +31,7 @@ const navItems = [
     link: '/search'
   },
   {
-    tlt: 'REVEAL API',
+    tlt: 'REVEAL-API',
     link: '/reveal-api'
   },
   {
@@ -40,10 +40,11 @@ const navItems = [
   }
 ];
 
+
 class GlobalHeader extends PureComponent {
 
   state = {
-    current: 'INDEX'
+    current: window.location.pathname.substring(1).toUpperCase() || 'HOME'
   };
 
   handleClick = (e) => {
@@ -54,7 +55,6 @@ class GlobalHeader extends PureComponent {
       link: e.item.props.link,
       params: {}
     });
-
   };
 
   render () {

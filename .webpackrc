@@ -1,2 +1,3 @@
 {
+  "theme": "./src/styles/theme.js"
 }

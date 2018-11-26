@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'dva/dynamic';
 import PropTypes from 'prop-types'
-import { Route, Router, Switch } from 'dva/router';
+import { Route, Router, Switch, Redirect } from 'dva/router';
 import GlobalHeader from './components/GlobalHeader';
 import GlobalFooter from './components/GlobalFooter';
 
@@ -12,15 +12,32 @@ function RouterConfig ({history, app}) {
   //   component: () => import('./routes/ErrorPage')
   // });
 
+  const commonModels = [require('./models/GlobalHeaderModel')];
+
   const routes = [
     {
-      path: '/',
-      models: () => [require('./models/IndexModel')],
+      path: '/index',
+      models: () => [...commonModels, require('./models/IndexModel')],
       component: () => require('./routes/IndexPage')
     },
     {
       path: '/relations',
-      models: () => [require('./models/RelationModel')],
+      models: () => [...commonModels, require('./models/RelationModel')],
+      component: () => require('./routes/RelationPage')
+    },
+    {
+      path: '/search',
+      models: () => [...commonModels, require('./models/RelationModel')],
+      component: () => require('./routes/RelationPage')
+    },
+    {
+      path: '/reveal-api',
+      models: () => [...commonModels, require('./models/RelationModel')],
+      component: () => require('./routes/RelationPage')
+    },
+    {
+      path: '/help',
+      models: () => [...commonModels, require('./models/RelationModel')],
       component: () => require('./routes/RelationPage')
     }
   ];
@@ -30,7 +47,7 @@ function RouterConfig ({history, app}) {
       <GlobalHeader/>
       <Router history={history}>
         <Switch>
-          {/*<Route path="/" exact render={() => <Redirect to="/index" />} />*/}
+          <Route path={'/'} exact render={() => <Redirect to={'index'} />} />
           {
             routes.map(({path, ...dynamics}, key) => (
               <Route key={key}

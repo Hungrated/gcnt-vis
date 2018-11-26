@@ -1,24 +1,42 @@
 import React, { PureComponent } from 'react';
+import { connect } from 'dva';
 import { Menu } from 'antd';
 import 'antd/lib/menu/style';
 import styles from '../styles/GlobalHeader.less';
 
+const mapStateToProps = ({header}) => ({
+  header
+});
+
+const mapDispatchToProps = dispatch => ({
+  dispatch,
+  dispatcher: {
+    header: {
+      redirect: payload => dispatch({type: 'header/redirect', payload})
+    }
+  }
+});
+
 const navItems = [
   {
     tlt: 'INDEX',
-    link: '/'
+    link: '/index'
   },
   {
     tlt: 'RELATIONS',
     link: '/relations'
   },
   {
+    tlt: 'SEARCH',
+    link: '/search'
+  },
+  {
     tlt: 'REVEAL API',
-    link: '/'
+    link: '/reveal-api'
   },
   {
     tlt: 'HELP',
-    link: '/'
+    link: '/help'
   }
 ];
 
@@ -29,10 +47,14 @@ class GlobalHeader extends PureComponent {
   };
 
   handleClick = (e) => {
-    console.log('click ', e);
     this.setState({
       current: e.key
     });
+    this.props.dispatcher.header.redirect({
+      link: e.item.props.link,
+      params: {}
+    });
+
   };
 
   render () {
@@ -50,7 +72,7 @@ class GlobalHeader extends PureComponent {
           >
             {
               navItems.map(({tlt, link}) => (
-                <Menu.Item key={tlt}>
+                <Menu.Item key={tlt} link={link}>
                   <strong>{tlt}</strong>
                 </Menu.Item>
               ))
@@ -64,4 +86,5 @@ class GlobalHeader extends PureComponent {
 
 GlobalHeader.propTypes = {};
 
-export default GlobalHeader;
+export default connect(mapStateToProps, mapDispatchToProps)(GlobalHeader);
+;

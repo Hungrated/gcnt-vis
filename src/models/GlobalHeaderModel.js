@@ -6,21 +6,12 @@ export default {
 
   state: {},
 
-  subscriptions: {
-    setup({ dispatch, history }) {  // eslint-disable-line
-    },
-  },
-
   effects: {
     * redirect ({ payload }, { put }) {
-      yield put(routerRedux.push('/user', {name: 'dkvirus', age: 20}));
+      yield put(routerRedux.push(payload.link, payload.params));
     },
   },
 
   reducers: {
-    save(state, action) {
-      return { ...state, ...action.payload };
-    },
-  },
-
+  }
 };

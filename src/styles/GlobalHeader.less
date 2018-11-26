@@ -1,4 +1,7 @@
 .g-header {
+  position: absolute;
+  top: 0;
+  left: 0;
   padding: 0 20px;
   width: 100%;
   height: 46px;
@@ -6,7 +9,8 @@
   color: #999999;
   line-height: 46px;
   user-select: none;
-  box-shadow: 0 1px 15px #001529;
+  box-shadow: 0 1px 15px #00416b;
+  z-index: 1;
 
   .m-logo {
     height: 46px;
@@ -15,12 +19,13 @@
 
     .inner {
       display: inline-block;
-      height: 100%;
+      height: 85%;
+      line-height: 46px;
     }
   }
 
   .m-nav {
-    width: 403px;
+    max-width: 600px;
     display: inline-block;
     vertical-align: top;
     height: 45px;

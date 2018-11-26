@@ -1,7 +1,7 @@
 import dva from 'dva';
 import { createBrowserHistory as createHistory } from 'history';
 
-import './styles/index.css';
+import './styles/index.less';
 
 // 1. Initialize
 const app = dva({

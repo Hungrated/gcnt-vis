@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'dva/dynamic';
-import PropTypes from 'prop-types'
-import { Route, Router, Switch, Redirect } from 'dva/router';
+import PropTypes from 'prop-types';
+import { Redirect, Route, Router, Switch } from 'dva/router';
 import GlobalHeader from './components/GlobalHeader';
 import GlobalFooter from './components/GlobalFooter';
 
@@ -11,12 +11,12 @@ function RouterConfig ({history, app}) {
 
   const routes = [
     {
-      path: '/home',
+      path: '/overview',
       models: () => [...commonModels, require('./models/IndexModel')],
       component: () => require('./routes/IndexPage')
     },
     {
-      path: '/relations',
+      path: '/statistics',
       models: () => [...commonModels, require('./models/RelationModel')],
       component: () => require('./routes/RelationPage')
     },
@@ -47,7 +47,7 @@ function RouterConfig ({history, app}) {
       <GlobalHeader/>
       <Router history={history}>
         <Switch>
-          <Route path={'/'} exact render={() => <Redirect to={'/home'} />} />
+          <Route path={'/'} exact render={() => <Redirect to={'/overview'}/>}/>
           {
             routes.map(({path, ...dynamics}, key) => (
               <Route key={key}
@@ -60,7 +60,7 @@ function RouterConfig ({history, app}) {
               />
             ))
           }
-          <Route path={'/'} render={() => <Redirect to={'/error'} />} />
+          <Route path={'/'} render={() => <Redirect to={'/error'}/>}/>
         </Switch>
       </Router>
       <GlobalFooter/>

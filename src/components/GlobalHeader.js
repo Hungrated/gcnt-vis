@@ -19,32 +19,36 @@ const mapDispatchToProps = dispatch => ({
 
 const navItems = [
   {
-    tlt: 'HOME',
-    link: '/home'
+    key: 'overview',
+    tlt: 'OVERVIEW',
+    link: '/overview'
   },
   {
-    tlt: 'RELATIONS',
-    link: '/relations'
+    key: 'statistics',
+    tlt: 'STATISTICS',
+    link: '/statistics'
   },
   {
+    key: 'search',
     tlt: 'SEARCH',
     link: '/search'
   },
   {
-    tlt: 'REVEAL-API',
+    key: 'reveal-api',
+    tlt: 'REVEAL API',
     link: '/reveal-api'
   },
   {
+    key: 'help',
     tlt: 'HELP',
     link: '/help'
   }
 ];
 
-
 class GlobalHeader extends PureComponent {
 
   state = {
-    current: window.location.pathname.substring(1).toUpperCase() || 'HOME'
+    current: window.location.pathname.substring(1) || 'OVERVIEW'
   };
 
   handleClick = (e) => {
@@ -71,8 +75,8 @@ class GlobalHeader extends PureComponent {
                 mode={'horizontal'}
           >
             {
-              navItems.map(({tlt, link}) => (
-                <Menu.Item key={tlt} link={link}>
+              navItems.map(({key, tlt, link}) => (
+                <Menu.Item key={key} link={link}>
                   <strong>{tlt}</strong>
                 </Menu.Item>
               ))
@@ -87,4 +91,4 @@ class GlobalHeader extends PureComponent {
 GlobalHeader.propTypes = {};
 
 export default connect(mapStateToProps, mapDispatchToProps)(GlobalHeader);
-;
+

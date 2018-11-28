@@ -3,5 +3,5 @@
  */
 
 export default {
-  "primary-color": "#002F4E"
-}
+  'primary-color': '#002F4E'
+};

@@ -2,7 +2,7 @@ import { queryMapData } from '../services/RequestApi';
 
 export default {
 
-  namespace: 'index',
+  namespace: 'overview',
 
   state: {
     data: {
@@ -42,3 +42,28 @@ export default {
   }
 
 };
+
+// export default {
+//
+//   namespace: 'example',
+//
+//   state: {},
+//
+//   subscriptions: {
+//     setup({ dispatch, history }) {  // eslint-disable-line
+//     },
+//   },
+//
+//   effects: {
+//     *fetch({ payload }, { call, put }) {  // eslint-disable-line
+//       yield put({ type: 'save' });
+//     },
+//   },
+//
+//   reducers: {
+//     save(state, action) {
+//       return { ...state, ...action.payload };
+//     },
+//   },
+//
+// };

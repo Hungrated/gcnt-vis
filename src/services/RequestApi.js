@@ -1,9 +1,17 @@
 import request from '../utils/request';
 
-export async function queryMapData() {
+export async function queryMapData () {
   return request('/mock/test.json');
 }
 
-export async function queryRelationChartData() {
+export async function queryRelationChartData () {
+  return request('/mock/relationChart.json');
+}
+
+export async function queryStatisticsChartData () {
+  return request('/mock/relationChart.json');
+}
+
+export async function searchWithParams () {
   return request('/mock/relationChart.json');
 }

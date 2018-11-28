@@ -2,8 +2,8 @@ import React from 'react';
 import dynamic from 'dva/dynamic';
 import PropTypes from 'prop-types';
 import { Redirect, Route, Router, Switch } from 'dva/router';
-import GlobalHeader from './components/GlobalHeader';
-import GlobalFooter from './components/GlobalFooter';
+import GlobalHeader from './components/common/GlobalHeader';
+import GlobalFooter from './components/common/GlobalFooter';
 
 function RouterConfig ({history, app}) {
 
@@ -12,28 +12,23 @@ function RouterConfig ({history, app}) {
   const routes = [
     {
       path: '/overview',
-      models: () => [...commonModels, require('./models/IndexModel')],
-      component: () => require('./routes/IndexPage')
+      models: () => [...commonModels, require('./models/OverviewModel')],
+      component: () => require('./routes/OverviewPage')
     },
     {
       path: '/statistics',
-      models: () => [...commonModels, require('./models/RelationModel')],
-      component: () => require('./routes/RelationPage')
+      models: () => [...commonModels, require('./models/StatisticsModel')],
+      component: () => require('./routes/StatisticsPage')
     },
     {
       path: '/search',
-      models: () => [...commonModels, require('./models/RelationModel')],
-      component: () => require('./routes/RelationPage')
-    },
-    {
-      path: '/reveal-api',
-      models: () => [...commonModels, require('./models/RelationModel')],
-      component: () => require('./routes/RelationPage')
+      models: () => [...commonModels, require('./models/SearchModel')],
+      component: () => require('./routes/SearchPage')
     },
     {
       path: '/help',
-      models: () => [...commonModels, require('./models/RelationModel')],
-      component: () => require('./routes/RelationPage')
+      models: () => [...commonModels],
+      component: () => require('./routes/HelpPage')
     },
     {
       path: '/error',
@@ -43,7 +38,7 @@ function RouterConfig ({history, app}) {
   ];
 
   return (
-    <div>
+    <div className={'g-root'}>
       <GlobalHeader/>
       <Router history={history}>
         <Switch>

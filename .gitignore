@@ -10,5 +10,4 @@
 npm-debug.log*
 /.idea/
 
-/public/index.html
 /package-lock.json

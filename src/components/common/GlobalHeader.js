@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 import { Menu } from 'antd';
 import 'antd/lib/menu/style';
-import styles from '../styles/GlobalHeader.less';
+import styles from '../../styles/GlobalHeader.less';
 
 const mapStateToProps = ({header}) => ({
   header
@@ -20,27 +20,27 @@ const mapDispatchToProps = dispatch => ({
 const navItems = [
   {
     key: 'overview',
-    tlt: 'OVERVIEW',
+    tlt: '总 览',
     link: '/overview'
   },
   {
     key: 'statistics',
-    tlt: 'STATISTICS',
+    tlt: '统 计',
     link: '/statistics'
   },
   {
     key: 'search',
-    tlt: 'SEARCH',
+    tlt: '搜 索',
     link: '/search'
   },
   {
     key: 'reveal-api',
-    tlt: 'REVEAL API',
-    link: '/reveal-api'
+    tlt: '查看 API',
+    link: 'https://github.com/Hungrated/gcnt-vis'
   },
   {
     key: 'help',
-    tlt: 'HELP',
+    tlt: '帮 助',
     link: '/help'
   }
 ];
@@ -48,17 +48,22 @@ const navItems = [
 class GlobalHeader extends PureComponent {
 
   state = {
-    current: window.location.pathname.substring(1) || 'OVERVIEW'
+    current: window.location.pathname.substring(1) || 'overview'
   };
 
   handleClick = (e) => {
-    this.setState({
-      current: e.key
-    });
-    this.props.dispatcher.header.redirect({
-      link: e.item.props.link,
-      params: {}
-    });
+    const link = e.item.props.link;
+    if ((/^(http|https):\/\//).test(link)) {
+      window.open(link);
+    } else {
+      this.setState({
+        current: e.key
+      });
+      this.props.dispatcher.header.redirect({
+        link: e.item.props.link,
+        params: {}
+      });
+    }
   };
 
   render () {
@@ -66,7 +71,7 @@ class GlobalHeader extends PureComponent {
       <div className={styles['g-header']}>
         <div className={styles['m-logo']}>
           <img className={styles['inner']}
-               src={require('../assets/gcnt-logo-full.png')} alt={'logo'}/>
+               src={require('../../assets/gcnt-logo-full.png')} alt={'logo'}/>
         </div>
         <div className={styles['m-nav']}>
           <Menu onClick={this.handleClick}

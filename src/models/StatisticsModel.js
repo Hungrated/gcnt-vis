@@ -1,8 +1,8 @@
-import { queryRelationChartData } from '../services/RequestApi';
+import { queryStatisticsChartData } from '../services/RequestApi';
 
 export default {
 
-  namespace: 'relation',
+  namespace: 'statistics',
 
   state: {
     data: {}
@@ -15,16 +15,16 @@ export default {
 
   effects: {
     * fetch ({payload}, {put, call}) {
-      const response = yield call(queryRelationChartData, payload);
+      const response = yield call(queryStatisticsChartData, payload);
       yield put({
-        type: 'refreshMap',
+        type: 'refresh',
         payload: response.data
       });
     }
   },
 
   reducers: {
-    refreshMap (state, action) {
+    refresh (state, action) {
       return {
         ...state,
         data: action.payload

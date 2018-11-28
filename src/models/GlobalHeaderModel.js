@@ -7,11 +7,10 @@ export default {
   state: {},
 
   effects: {
-    * redirect ({ payload }, { put }) {
+    * redirect ({payload}, {put}) {
       yield put(routerRedux.push(payload.link, payload.params));
-    },
+    }
   },
 
-  reducers: {
-  }
+  reducers: {}
 };

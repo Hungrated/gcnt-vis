@@ -51,18 +51,22 @@ class GlobalHeader extends PureComponent {
     current: window.location.pathname.substring(1) || 'overview'
   };
 
+  togglePageRedirect = (key, link) => {
+    this.setState({
+      current: key
+    });
+    this.props.dispatcher.header.redirect({
+      link: link,
+      params: {}
+    });
+  };
+
   handleClick = (e) => {
     const link = e.item.props.link;
     if ((/^(http|https):\/\//).test(link)) {
       window.open(link);
     } else {
-      this.setState({
-        current: e.key
-      });
-      this.props.dispatcher.header.redirect({
-        link: e.item.props.link,
-        params: {}
-      });
+      this.togglePageRedirect(e.key, link);
     }
   };
 
@@ -71,7 +75,8 @@ class GlobalHeader extends PureComponent {
       <div className={styles['g-header']}>
         <div className={styles['m-logo']}>
           <img className={styles['inner']}
-               src={require('../../assets/gcnt-logo-full.png')} alt={'logo'}/>
+               src={require('../../assets/gcnt-logo-full.png')}
+               alt={'logo'}/>
         </div>
         <div className={styles['m-nav']}>
           <Menu onClick={this.handleClick}

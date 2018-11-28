@@ -25,10 +25,9 @@ class StatisticsPage extends PureComponent {
 
   render () {
     const {statistics: {data}} = this.props;
-    // console.log('data2 is', data);
     return (
       JSON.stringify(data) !== '{}' &&
-      <div className={styles['g-map']}>
+      <div className={styles['g-main']}>
         <StatisticsChart data={data}/>
       </div>
     );

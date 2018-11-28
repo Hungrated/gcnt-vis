@@ -28,7 +28,7 @@ class SearchPage extends PureComponent {
     // console.log('data2 is', data);
     return (
       JSON.stringify(data) !== '{}' &&
-      <div className={styles['g-map']}>
+      <div className={styles['g-main']}>
         <SearchChart data={data}/>
       </div>
     );

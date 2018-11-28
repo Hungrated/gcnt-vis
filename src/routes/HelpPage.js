@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 
-// import styles from '../styles/HelpPage.less';
+import styles from '../styles/HelpPage.less';
 
 // const mapStateToProps = ({ help }) => ({
 //   help,
@@ -24,7 +24,7 @@ class HelpPage extends PureComponent {
 
   render () {
     return (
-      <div>
+      <div className={styles['g-main']}>
         Help Page
       </div>
     );

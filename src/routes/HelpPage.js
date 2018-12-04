@@ -25,7 +25,6 @@ class HelpPage extends PureComponent {
   render () {
     return (
       <div className={styles['g-main']}>
-        Help Page
       </div>
     );
   }

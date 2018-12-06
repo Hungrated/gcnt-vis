@@ -5,22 +5,23 @@ import 'echarts/extension/bmap/bmap';
 
 const OverviewMap = ({data}) => {
 
-  const getOption = () => {
-    const getAirportCoord = (idx) => [
-      data.airports[idx][3],
-      data.airports[idx][4]];
+  console.log(data);
 
-    const routes = data.routes.map(function (airline) {
-      return [
-        getAirportCoord(airline[1]),
-        getAirportCoord(airline[2])
-      ];
+  const getOption = () => {
+
+    const convertedData = data.data.map(function (item) {
+      return {
+        name: `${item.province} - ${item.city}`,
+        value: [item.lon, item.lat]
+      };
     });
+
+    console.log(convertedData);
 
     return {
       bmap: {
-        center: [110, 33],
-        zoom: 5,
+        center: [110, 38],
+        zoom: 6,
         roam: true,
         mapStyle: {
           styleJson: [
@@ -157,26 +158,29 @@ const OverviewMap = ({data}) => {
       },
       series: [
         {
-          type: 'lines',
-
+          type: 'scatter',
           coordinateSystem: 'bmap',
 
-          // effect: {
-          //   show: true,
-          //   trailWidth: 2,
-          //   trailLength: 0.15,
-          //   trailOpacity: 1,
-          //   trailColor: 'rgb(30, 30, 60)'
-          // },
-
-          lineStyle: {
-            width: 0.8,
-            color: 'rgb(245, 180, 180)',
-            opacity: 0.1
+          itemStyle: {
+            color: '#f5fa33'
           },
-          blendMode: 'lighter',
 
-          data: routes
+          label: {
+            normal: {
+              formatter: '{b}',
+              position: 'right',
+              show: false
+            },
+            emphasis: {
+              show: true
+            }
+          },
+
+          rippleEffect: {
+            brushType: 'stroke'
+          },
+
+          data: convertedData
         }]
     };
   };

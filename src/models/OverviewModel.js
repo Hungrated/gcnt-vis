@@ -6,11 +6,7 @@ export default {
 
   state: {
     data: {
-      airportsFields: [],
-      airlineFields: [],
-      airports: [],
-      airlines: [],
-      routes: []
+      data: []
     }
   },
 

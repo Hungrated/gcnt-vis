@@ -1,7 +1,7 @@
 import request from '../utils/request';
 
 export async function queryMapData () {
-  return request('/mock/overViewMap.json');
+  return request('/mock/connection.json');
 }
 
 export async function queryRelationChartData () {

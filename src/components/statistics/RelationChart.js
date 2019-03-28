@@ -4,8 +4,8 @@ import ReactEcharts from 'echarts-for-react';
 const RelationChart = ({data}) => {
   const graph = data;
 
-  var categories = [];
-  for (var i = 0; i < 19; i++) {
+  let categories = [];
+  for (let i = 0; i < 19; i++) {
     categories[i] = {
       name: '类目' + (i + 1)
     };
@@ -26,18 +26,20 @@ const RelationChart = ({data}) => {
     return {
       title: {
         text: '基站之间关系图',
-        subtext: 'Default layout',
-        top: 'bottom',
-        left: 'right'
+        textStyle: {
+          color: '#ffffff'
+        },
+        left: 'center',
+        top: 20
       },
       tooltip: {},
-      legend: [
-        {
-          // selectedMode: 'single',
-          data: categories.map(function (a) {
-            return a.name;
-          })
-        }],
+      // legend: [
+      //   {
+      //     // selectedMode: 'single',
+      //     data: categories.map(function (a) {
+      //       return a.name;
+      //     })
+      //   }],
       animationDuration: 1500,
       animationEasingUpdate: 'quinticInOut',
       series: [

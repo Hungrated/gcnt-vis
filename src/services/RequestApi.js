@@ -5,13 +5,13 @@ export async function queryMapData () {
 }
 
 export async function queryRelationChartData () {
-  return request('/mock/relationChart.json');
+  return request('/mock/statistics.json');
 }
 
 export async function queryStatisticsChartData () {
-  return request('/mock/relationChart.json');
+  return request('/mock/statistics.json');
 }
 
 export async function searchWithParams () {
-  return request('/mock/relationChart.json');
+  return request('/mock/statistics.json');
 }

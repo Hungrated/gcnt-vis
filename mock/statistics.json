@@ -1,0 +1,1409 @@
+{
+  "relationChart": {
+    "nodes": [
+      {
+        "id": 0,
+        "name": "9660",
+        "category": 0,
+        "symbolSize": "581",
+        "value": "581",
+        "itemStyle": null,
+        "x": -87.93029,
+        "y": -6.8120565
+      },
+      {
+        "id": 1,
+        "name": "9619",
+        "category": 1,
+        "symbolSize": "3261216",
+        "value": "3261216",
+        "itemStyle": null,
+        "x": -81.46074,
+        "y": -204.20204
+      },
+      {
+        "id": 2,
+        "name": "9223",
+        "category": 2,
+        "symbolSize": "134321",
+        "value": "134321",
+        "itemStyle": null,
+        "x": 387.89572,
+        "y": 110.462326
+      },
+      {
+        "id": 3,
+        "name": "9160",
+        "category": 3,
+        "symbolSize": "44162",
+        "value": "44162",
+        "itemStyle": null,
+        "x": 33,
+        "y": 33
+      },
+      {
+        "id": 4,
+        "name": "9609",
+        "category": 4,
+        "symbolSize": "3132961",
+        "value": "3132961",
+        "itemStyle": null,
+        "x": 155,
+        "y": 68
+      },
+      {
+        "id": 5,
+        "name": "9164",
+        "category": 5,
+        "symbolSize": "2519450",
+        "value": "2519450",
+        "itemStyle": null,
+        "x": 78,
+        "y": 198
+      },
+      {
+        "id": 6,
+        "name": "4201",
+        "category": 6,
+        "symbolSize": "8805",
+        "value": "8805",
+        "itemStyle": null,
+        "x": 195,
+        "y": 119
+      },
+      {
+        "id": 7,
+        "name": "9659",
+        "category": 7,
+        "symbolSize": "646",
+        "value": "646",
+        "itemStyle": null,
+        "x": 210,
+        "y": -140
+      },
+      {
+        "id": 8,
+        "name": "193",
+        "category": 8,
+        "symbolSize": "11746",
+        "value": "11746",
+        "itemStyle": null,
+        "x": -134,
+        "y": 168
+      },
+      {
+        "id": 9,
+        "name": "9208",
+        "category": 9,
+        "symbolSize": "2173704",
+        "value": "2173704",
+        "itemStyle": null,
+        "x": -169,
+        "y": 198
+      },
+      {
+        "id": 10,
+        "name": "9625",
+        "category": 10,
+        "symbolSize": "4",
+        "value": "4",
+        "itemStyle": null,
+        "x": 295,
+        "y": 318
+      },
+      {
+        "id": 11,
+        "name": "9168",
+        "category": 11,
+        "symbolSize": "3738678",
+        "value": "3738678",
+        "itemStyle": null,
+        "x": 709,
+        "y": -130
+      },
+      {
+        "id": 12,
+        "name": "4200",
+        "category": 12,
+        "symbolSize": "2941",
+        "value": "2941",
+        "itemStyle": null,
+        "x": 354,
+        "y": 30
+      },
+      {
+        "id": 13,
+        "name": "4558",
+        "category": 13,
+        "symbolSize": "5518",
+        "value": "5518",
+        "itemStyle": null,
+        "x": -98,
+        "y": 387
+      },
+      {
+        "id": 14,
+        "name": "4169",
+        "category": 14,
+        "symbolSize": "902757",
+        "value": "902757",
+        "itemStyle": null,
+        "x": 129,
+        "y": -358
+      },
+      {
+        "id": 15,
+        "name": "9209",
+        "category": 15,
+        "symbolSize": "10102134",
+        "value": "10102134",
+        "itemStyle": null,
+        "x": 505,
+        "y": -245
+      },
+      {
+        "id": 16,
+        "name": "9210",
+        "category": 16,
+        "symbolSize": "535418",
+        "value": "535418",
+        "itemStyle": null,
+        "x": 478,
+        "y": 123
+      },
+      {
+        "id": 17,
+        "name": "9222",
+        "category": 17,
+        "symbolSize": "715233",
+        "value": "715233",
+        "itemStyle": null,
+        "x": 578,
+        "y": 110
+      },
+      {
+        "id": 18,
+        "name": "4168",
+        "category": 2,
+        "symbolSize": "1799725",
+        "value": "1799725",
+        "itemStyle": null,
+        "x": -458,
+        "y": 110
+      }
+    ],
+    "links": [
+      {
+        "id": 0,
+        "source": "11",
+        "target": "4",
+        "lineStyle": {
+          "normal": {
+            "width": 10,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 1,
+        "source": "11",
+        "target": "1",
+        "lineStyle": {
+          "normal": {
+            "width": 9,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 2,
+        "source": "1",
+        "target": "5",
+        "lineStyle": {
+          "normal": {
+            "width": 8,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 3,
+        "source": "1",
+        "target": "5",
+        "lineStyle": {
+          "normal": {
+            "width": 8,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 4,
+        "source": "9",
+        "target": "18",
+        "lineStyle": {
+          "normal": {
+            "width": 7,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 5,
+        "source": "4",
+        "target": "5",
+        "lineStyle": {
+          "normal": {
+            "width": 6,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 6,
+        "source": "15",
+        "target": "14",
+        "lineStyle": {
+          "normal": {
+            "width": 5,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 7,
+        "source": "17",
+        "target": "9",
+        "lineStyle": {
+          "normal": {
+            "width": 4,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 8,
+        "source": "16",
+        "target": "18",
+        "lineStyle": {
+          "normal": {
+            "width": 3,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 9,
+        "source": "9",
+        "target": "1",
+        "lineStyle": {
+          "normal": {
+            "width": 2,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 10,
+        "source": "9",
+        "target": "4",
+        "lineStyle": {
+          "normal": {
+            "width": 2,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 11,
+        "source": "5",
+        "target": 2,
+        "lineStyle": {
+          "normal": {
+            "width": 1.8,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 12,
+        "source": "2",
+        "target": "5",
+        "lineStyle": {
+          "normal": {
+            "width": 1.6,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 13,
+        "source": "15",
+        "target": "4",
+        "lineStyle": {
+          "normal": {
+            "width": 1.3,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 14,
+        "source": "15",
+        "target": "1",
+        "lineStyle": {
+          "normal": {
+            "width": 1.3,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 15,
+        "source": "3",
+        "target": "5",
+        "lineStyle": {
+          "normal": {
+            "width": 1.2,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 16,
+        "source": "16",
+        "target": "4",
+        "lineStyle": {
+          "normal": {
+            "width": 0.8,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 17,
+        "source": "16",
+        "target": "1",
+        "lineStyle": {
+          "normal": {
+            "width": 0.8,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 18,
+        "source": "5",
+        "target": "4",
+        "lineStyle": {
+          "normal": {
+            "width": 0.8,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 19,
+        "source": "5",
+        "target": "1",
+        "lineStyle": {
+          "normal": {
+            "width": 0.8,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 19,
+        "source": "5",
+        "target": "1",
+        "lineStyle": {
+          "normal": {
+            "width": 0.8,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 22,
+        "source": "2",
+        "target": "14",
+        "lineStyle": {
+          "normal": {
+            "width": 0.4,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 20,
+        "source": "11",
+        "target": "13",
+        "lineStyle": {
+          "normal": {
+            "width": 0.4,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 21,
+        "source": "8",
+        "target": "6",
+        "lineStyle": {
+          "normal": {
+            "width": 0.4,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 23,
+        "source": "2",
+        "target": "18",
+        "lineStyle": {
+          "normal": {
+            "width": 0.4,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 24,
+        "source": "6",
+        "target": "8",
+        "lineStyle": {
+          "normal": {
+            "width": 0.4,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 25,
+        "source": "12",
+        "target": "8",
+        "lineStyle": {
+          "normal": {
+            "width": 0.2,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 26,
+        "source": "15",
+        "target": "3",
+        "lineStyle": {
+          "normal": {
+            "width": 0.1,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 27,
+        "source": "7",
+        "target": "5",
+        "lineStyle": {
+          "normal": {
+            "width": 0.1,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 28,
+        "source": "15",
+        "target": "2",
+        "lineStyle": {
+          "normal": {
+            "width": 0.1,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 29,
+        "source": "0",
+        "target": "5",
+        "lineStyle": {
+          "normal": {
+            "width": 0.1,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 30,
+        "source": "15",
+        "target": "7",
+        "lineStyle": {
+          "normal": {
+            "width": 0.1,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 31,
+        "source": "15",
+        "target": "0",
+        "lineStyle": {
+          "normal": {
+            "width": 0.1,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 32,
+        "source": "2",
+        "target": "0",
+        "lineStyle": {
+          "normal": {
+            "width": 0.1,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 33,
+        "source": "2",
+        "target": "3",
+        "lineStyle": {
+          "normal": {
+            "width": 0.05,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 34,
+        "source": "16",
+        "target": "3",
+        "lineStyle": {
+          "normal": {
+            "width": 0.05,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 35,
+        "source": "5",
+        "target": "0",
+        "lineStyle": {
+          "normal": {
+            "width": 0.05,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 36,
+        "source": "5",
+        "target": "7",
+        "lineStyle": {
+          "normal": {
+            "width": 0.05,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 37,
+        "source": "15",
+        "target": "7",
+        "lineStyle": {
+          "normal": {
+            "width": 0.05,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 38,
+        "source": "10",
+        "target": "14",
+        "lineStyle": {
+          "normal": {
+            "width": 0.05,
+            "curveness": 0.2
+          }
+        }
+      },
+      {
+        "id": 39,
+        "source": "9",
+        "target": "3",
+        "lineStyle": {
+          "normal": {
+            "width": 0.05,
+            "curveness": 0.2
+          }
+        }
+      }
+    ]
+  },
+  "nationalTop15Chart": [
+    {
+      "Gt": 8613254356,
+      "Ssn": 7,
+      "province": "甘肃",
+      "city": "天水",
+      "lat": 34.5843194189,
+      "lon": 105.7369316229,
+      "amount": 961097
+    },
+    {
+      "Gt": 861300877000,
+      "Ssn": 6,
+      "province": "甘肃",
+      "city": "兰州",
+      "lat": 36.064225525,
+      "lon": 103.8233054407,
+      "amount": 584387
+    },
+    {
+      "Gt": 861328991000,
+      "Ssn": 6,
+      "province": "新疆",
+      "city": "乌鲁木齐",
+      "lat": 43.8403803472,
+      "lon": 87.5649877411,
+      "amount": 494541
+    },
+    {
+      "Gt": 8613254357,
+      "Ssn": 7,
+      "province": "甘肃",
+      "city": "定西",
+      "lat": 35.5860562418,
+      "lon": 104.6266376007,
+      "amount": 378406
+    },
+    {
+      "Gt": 8613254360,
+      "Ssn": 7,
+      "province": "甘肃",
+      "city": "兰州",
+      "lat": 36.064225525,
+      "lon": 103.8233054407,
+      "amount": 176477
+    },
+    {
+      "Gt": 8613254359,
+      "Ssn": 7,
+      "province": "甘肃",
+      "city": "兰州",
+      "lat": 36.064225525,
+      "lon": 103.8233054407,
+      "amount": 174401
+    },
+    {
+      "Gt": 861304051000,
+      "Ssn": 6,
+      "province": "新疆",
+      "city": "乌鲁木齐",
+      "lat": 43.8403803472,
+      "lon": 87.5649877411,
+      "amount": 161484
+    },
+    {
+      "Gt": 8613254352,
+      "Ssn": 7,
+      "province": "甘肃",
+      "city": "酒泉",
+      "lat": 39.7414737682,
+      "lon": 98.5084145062,
+      "amount": 112621
+    },
+    {
+      "Gt": 8613254354,
+      "Ssn": 7,
+      "province": "甘肃",
+      "city": "武威",
+      "lat": 37.9331721429,
+      "lon": 102.6401473434,
+      "amount": 108016
+    },
+    {
+      "Gt": 861324509000,
+      "Ssn": 6,
+      "province": "江苏",
+      "city": "苏州",
+      "lat": 31.317987368,
+      "lon": 120.6199071155,
+      "amount": 86583
+    },
+    {
+      "Gt": 861304056000,
+      "Ssn": 6,
+      "province": "新疆",
+      "city": "奎屯",
+      "lat": 44.559556779,
+      "lon": 85.0139344015,
+      "amount": 80035
+    },
+    {
+      "Gt": 861311510000,
+      "Ssn": 6,
+      "province": "江苏",
+      "city": "苏州",
+      "lat": 31.317987368,
+      "lon": 120.6199071155,
+      "amount": 77866
+    },
+    {
+      "Gt": 861327990000,
+      "Ssn": 6,
+      "province": "新疆",
+      "city": "喀什",
+      "lat": 39.5131105853,
+      "lon": 76.0143427989,
+      "amount": 55162
+    },
+    {
+      "Gt": 861302962000,
+      "Ssn": 6,
+      "province": "新疆",
+      "city": "库尔勒",
+      "lat": 41.7054999057,
+      "lon": 85.7094176017,
+      "amount": 49180
+    },
+    {
+      "Gt": 8613254875,
+      "Ssn": 7,
+      "province": "宁夏",
+      "city": "中卫",
+      "lat": 37.5211241916,
+      "lon": 105.1967541994,
+      "amount": 37455
+    }
+  ],
+  "connectionTop15Chart": [
+    {
+      "province_src": "新疆",
+      "city_src": "乌鲁木齐",
+      "callingGt": 861328991000,
+      "callingSsn": 6,
+      "calledGt": 8613254356,
+      "calledSsn": 7,
+      "province_dest": "甘肃",
+      "city_dest": "天水",
+      "amount": 44810
+    },
+    {
+      "province_src": "甘肃",
+      "city_src": "天水",
+      "callingGt": 8613254356,
+      "callingSsn": 7,
+      "calledGt": 861328991000,
+      "calledSsn": 6,
+      "province_dest": "新疆",
+      "city_dest": "乌鲁木齐",
+      "amount": 29225
+    },
+    {
+      "province_src": "新疆",
+      "city_src": "乌鲁木齐",
+      "callingGt": 861328991000,
+      "callingSsn": 6,
+      "calledGt": 8613254357,
+      "calledSsn": 7,
+      "province_dest": "甘肃",
+      "city_dest": "定西",
+      "amount": 12982
+    },
+    {
+      "province_src": "新疆",
+      "city_src": "乌鲁木齐",
+      "callingGt": 861304051000,
+      "callingSsn": 6,
+      "calledGt": 8613254356,
+      "calledSsn": 7,
+      "province_dest": "甘肃",
+      "city_dest": "天水",
+      "amount": 12361
+    },
+    {
+      "province_src": "新疆",
+      "city_src": "乌鲁木齐",
+      "callingGt": 861328991000,
+      "callingSsn": 6,
+      "calledGt": 8613254352,
+      "calledSsn": 7,
+      "province_dest": "甘肃",
+      "city_dest": "酒泉",
+      "amount": 9207
+    },
+    {
+      "province_src": "甘肃",
+      "city_src": "定西",
+      "callingGt": 8613254357,
+      "callingSsn": 7,
+      "calledGt": 861328991000,
+      "calledSsn": 6,
+      "province_dest": "新疆",
+      "city_dest": "乌鲁木齐",
+      "amount": 8451
+    },
+    {
+      "province_src": "江苏",
+      "city_src": "苏州",
+      "callingGt": 861324509000,
+      "callingSsn": 6,
+      "calledGt": 8613254356,
+      "calledSsn": 7,
+      "province_dest": "甘肃",
+      "city_dest": "天水",
+      "amount": 8386
+    },
+    {
+      "province_src": "江苏",
+      "city_src": "苏州",
+      "callingGt": 861311510000,
+      "callingSsn": 6,
+      "calledGt": 8613254356,
+      "calledSsn": 7,
+      "province_dest": "甘肃",
+      "city_dest": "天水",
+      "amount": 7475
+    },
+    {
+      "province_src": "新疆",
+      "city_src": "乌鲁木齐",
+      "callingGt": 861328991000,
+      "callingSsn": 6,
+      "calledGt": 8613254354,
+      "calledSsn": 7,
+      "province_dest": "甘肃",
+      "city_dest": "武威",
+      "amount": 6810
+    },
+    {
+      "province_src": "甘肃",
+      "city_src": "酒泉",
+      "callingGt": 8613254352,
+      "callingSsn": 7,
+      "calledGt": 861328991000,
+      "calledSsn": 6,
+      "province_dest": "新疆",
+      "city_dest": "乌鲁木齐",
+      "amount": 6171
+    },
+    {
+      "province_src": "新疆",
+      "city_src": "乌鲁木齐",
+      "callingGt": 861304051000,
+      "callingSsn": 6,
+      "calledGt": 8613254352,
+      "calledSsn": 7,
+      "province_dest": "甘肃",
+      "city_dest": "酒泉",
+      "amount": 5276
+    },
+    {
+      "province_src": "甘肃",
+      "city_src": "兰州",
+      "callingGt": 861300877000,
+      "callingSsn": 6,
+      "calledGt": 8613254875,
+      "calledSsn": 7,
+      "province_dest": "宁夏",
+      "city_dest": "中卫",
+      "amount": 4980
+    },
+    {
+      "province_src": "甘肃",
+      "city_src": "武威",
+      "callingGt": 8613254354,
+      "callingSsn": 7,
+      "calledGt": 861328991000,
+      "calledSsn": 6,
+      "province_dest": "新疆",
+      "city_dest": "乌鲁木齐",
+      "amount": 4355
+    },
+    {
+      "province_src": "新疆",
+      "city_src": "奎屯",
+      "callingGt": 861304056000,
+      "callingSsn": 6,
+      "calledGt": 8613254356,
+      "calledSsn": 7,
+      "province_dest": "甘肃",
+      "city_dest": "天水",
+      "amount": 4209
+    },
+    {
+      "province_src": "新疆",
+      "city_src": "乌鲁木齐",
+      "callingGt": 861304051000,
+      "callingSsn": 6,
+      "calledGt": 8613254354,
+      "calledSsn": 7,
+      "province_dest": "甘肃",
+      "city_dest": "武威",
+      "amount": 4196
+    }
+  ],
+  "mscTop15Chart": [
+    {
+      "province": "广东省",
+      "city": "深圳市",
+      "ssn": 7,
+      "callingGt": 8613200561,
+      "callingSsn": 7,
+      "calledGt": 85290240832,
+      "calledSsn": 6,
+      "country": "澳门",
+      "capital": "香港",
+      "amount": 7051
+    },
+    {
+      "province": "广东省",
+      "city": "深圳市",
+      "ssn": 7,
+      "callingGt": 8613200563,
+      "callingSsn": 7,
+      "calledGt": 85290240832,
+      "calledSsn": 6,
+      "country": "澳门",
+      "capital": "香港",
+      "amount": 6869
+    },
+    {
+      "province": "广东省",
+      "city": "广州市",
+      "ssn": 7,
+      "callingGt": 8615654226,
+      "callingSsn": 7,
+      "calledGt": 85290240832,
+      "calledSsn": 6,
+      "country": "澳门",
+      "capital": "香港",
+      "amount": 2171
+    },
+    {
+      "province": "广东省",
+      "city": "深圳市",
+      "ssn": 7,
+      "callingGt": 8613200564,
+      "callingSsn": 7,
+      "calledGt": 85290240832,
+      "calledSsn": 6,
+      "country": "澳门",
+      "capital": "香港",
+      "amount": 1705
+    },
+    {
+      "province": "广东省",
+      "city": "深圳市",
+      "ssn": 7,
+      "callingGt": 8613200560,
+      "callingSsn": 7,
+      "calledGt": 85290240832,
+      "calledSsn": 6,
+      "country": "澳门",
+      "capital": "香港",
+      "amount": 1660
+    },
+    {
+      "province": "香港特别行政区",
+      "city": "香港特别行政区",
+      "ssn": 7,
+      "callingGt": 8613200562,
+      "callingSsn": 7,
+      "calledGt": 85263347880,
+      "calledSsn": 6,
+      "country": "澳门",
+      "capital": "香港",
+      "amount": 1617
+    },
+    {
+      "province": "广东省",
+      "city": "广州市",
+      "ssn": 7,
+      "callingGt": 8615644263,
+      "callingSsn": 7,
+      "calledGt": 85290240832,
+      "calledSsn": 6,
+      "country": "澳门",
+      "capital": "香港",
+      "amount": 1612
+    },
+    {
+      "province": "广东省",
+      "city": "广州市",
+      "ssn": 7,
+      "callingGt": 8615654224,
+      "callingSsn": 7,
+      "calledGt": 85290240832,
+      "calledSsn": 6,
+      "country": "澳门",
+      "capital": "香港",
+      "amount": 1558
+    },
+    {
+      "province": "广东省",
+      "city": "珠海市",
+      "ssn": 7,
+      "callingGt": 8613200538,
+      "callingSsn": 7,
+      "calledGt": 85368989852,
+      "calledSsn": 6,
+      "country": "澳门",
+      "capital": "澳门",
+      "amount": 1446
+    },
+    {
+      "province": "黑龙江",
+      "city": "牡丹江",
+      "ssn": 8,
+      "callingGt": 8613254955,
+      "callingSsn": 7,
+      "calledGt": 821080010585,
+      "calledSsn": 6,
+      "country": "韩国",
+      "capital": "首尔",
+      "amount": 1203
+    },
+    {
+      "province": "广东省",
+      "city": "江门市",
+      "ssn": 7,
+      "callingGt": 8615654232,
+      "callingSsn": 7,
+      "calledGt": 85290240832,
+      "calledSsn": 6,
+      "country": "澳门",
+      "capital": "香港",
+      "amount": 1103
+    },
+    {
+      "province": "广东省",
+      "city": "深圳市",
+      "ssn": 7,
+      "callingGt": 8613200560,
+      "callingSsn": 7,
+      "calledGt": 85263347880,
+      "calledSsn": 6,
+      "country": "澳门",
+      "capital": "香港",
+      "amount": 1027
+    },
+    {
+      "province": "广东省",
+      "city": "广州市",
+      "ssn": 7,
+      "callingGt": 8615644261,
+      "callingSsn": 7,
+      "calledGt": 85290240832,
+      "calledSsn": 6,
+      "country": "澳门",
+      "capital": "香港",
+      "amount": 1012
+    },
+    {
+      "province": "广东省",
+      "city": "广州市",
+      "ssn": 7,
+      "callingGt": 8615654222,
+      "callingSsn": 7,
+      "calledGt": 85290240832,
+      "calledSsn": 6,
+      "country": "澳门",
+      "capital": "香港",
+      "amount": 950
+    },
+    {
+      "province": "上海",
+      "city": "上海",
+      "ssn": 8,
+      "callingGt": 8613254339,
+      "callingSsn": 7,
+      "calledGt": 85290240832,
+      "calledSsn": 6,
+      "country": "澳门",
+      "capital": "香港",
+      "amount": 938
+    }
+  ],
+  "hlrTop15Chart": [
+    {
+      "country": "荷兰",
+      "capital": "阿姆斯特丹",
+      "Gt": 316540791022,
+      "Ssn": 6,
+      "lat": 52.37,
+      "lon": 4.89,
+      "amount": 203588
+    },
+    {
+      "country": "澳门",
+      "capital": "香港",
+      "Gt": 85290240832,
+      "Ssn": 6,
+      "lat": 22.28,
+      "lon": 114.17,
+      "amount": 140291
+    },
+    {
+      "country": "荷兰",
+      "capital": "阿姆斯特丹",
+      "Gt": 316540791021,
+      "Ssn": 6,
+      "lat": 52.37,
+      "lon": 4.89,
+      "amount": 89625
+    },
+    {
+      "country": "柬埔寨",
+      "capital": "金边",
+      "Gt": 855970200015,
+      "Ssn": 6,
+      "lat": 11.57,
+      "lon": 104.92,
+      "amount": 34158
+    },
+    {
+      "country": "澳门",
+      "capital": "香港",
+      "Gt": 85263347880,
+      "Ssn": 6,
+      "lat": 22.28,
+      "lon": 114.17,
+      "amount": 26440
+    },
+    {
+      "country": "韩国",
+      "capital": "首尔",
+      "Gt": 821080010585,
+      "Ssn": 6,
+      "lat": 37.56,
+      "lon": 126.99,
+      "amount": 25946
+    },
+    {
+      "country": "马来西亚",
+      "capital": "吉隆坡",
+      "Gt": 60192040152,
+      "Ssn": 6,
+      "lat": 3.16,
+      "lon": 101.71,
+      "amount": 17857
+    },
+    {
+      "country": "韩国",
+      "capital": "首尔",
+      "Gt": 821196580000,
+      "Ssn": 6,
+      "lat": 37.56,
+      "lon": 126.99,
+      "amount": 17578
+    },
+    {
+      "country": "日本",
+      "capital": "东京",
+      "Gt": 818093110000,
+      "Ssn": 6,
+      "lat": 35.67,
+      "lon": 139.77,
+      "amount": 14757
+    },
+    {
+      "country": "澳门",
+      "capital": "澳门",
+      "Gt": 85368989852,
+      "Ssn": 6,
+      "lat": 22.19,
+      "lon": 113.54,
+      "amount": 11906
+    },
+    {
+      "country": "韩国",
+      "capital": "首尔",
+      "Gt": 821029191813,
+      "Ssn": 6,
+      "lat": 37.56,
+      "lon": 126.99,
+      "amount": 9833
+    },
+    {
+      "country": "澳大利亚",
+      "capital": "堪培拉",
+      "Gt": 61411999021,
+      "Ssn": 6,
+      "lat": -35.31,
+      "lon": 149.13,
+      "amount": 8764
+    },
+    {
+      "country": "澳大利亚",
+      "capital": "堪培拉",
+      "Gt": 61411999010,
+      "Ssn": 6,
+      "lat": -35.31,
+      "lon": 149.13,
+      "amount": 7358
+    },
+    {
+      "country": "澳门",
+      "capital": "香港",
+      "Gt": 85290184000,
+      "Ssn": 6,
+      "lat": 22.28,
+      "lon": 114.17,
+      "amount": 7050
+    },
+    {
+      "country": "澳大利亚",
+      "capital": "堪培拉",
+      "Gt": 61411999022,
+      "Ssn": 6,
+      "lat": -35.31,
+      "lon": 149.13,
+      "amount": 6589
+    }
+  ],
+  "globalTop15Charts": [
+    {
+      "Gt": 8613254815,
+      "Ssn": 7,
+      "province": "云南",
+      "city": "保山",
+      "lat": 25.1204891962,
+      "lon": 99.1779956133,
+      "amount": 57874
+    },
+    {
+      "Gt": 8613090742,
+      "Ssn": 149,
+      "province": "湖南",
+      "city": "长沙",
+      "lat": 28.2134782309,
+      "lon": 112.9793527877,
+      "amount": 12380
+    },
+    {
+      "Gt": 861326440000,
+      "Ssn": 6,
+      "province": "北京",
+      "city": "北京",
+      "lat": 39.9299857781,
+      "lon": 116.3956450379,
+      "amount": 10284
+    },
+    {
+      "Gt": 861322010000,
+      "Ssn": 6,
+      "province": "北京",
+      "city": "北京",
+      "lat": 39.9299857781,
+      "lon": 116.3956450379,
+      "amount": 8859
+    },
+    {
+      "Gt": 861326404000,
+      "Ssn": 6,
+      "province": "北京",
+      "city": "北京",
+      "lat": 39.9299857781,
+      "lon": 116.3956450379,
+      "amount": 7866
+    },
+    {
+      "Gt": 8613000142,
+      "Ssn": 149,
+      "province": "河北",
+      "city": "石家庄",
+      "lat": 38.0489583146,
+      "lon": 114.5220818442,
+      "amount": 7627
+    },
+    {
+      "Gt": 8613254339,
+      "Ssn": 7,
+      "province": "上海",
+      "city": "上海",
+      "lat": 31.24916171,
+      "lon": 121.4878994857,
+      "amount": 7585
+    },
+    {
+      "Gt": 8615644163,
+      "Ssn": 7,
+      "province": "上海",
+      "city": "上海",
+      "lat": 31.24916171,
+      "lon": 121.4878994857,
+      "amount": 7529
+    },
+    {
+      "Gt": 8613254244,
+      "Ssn": 149,
+      "province": "河北",
+      "city": "石家庄",
+      "lat": 38.0489583146,
+      "lon": 114.5220818442,
+      "amount": 7376
+    },
+    {
+      "Gt": 8613000141,
+      "Ssn": 149,
+      "province": "河北",
+      "city": "石家庄",
+      "lat": 38.0489583146,
+      "lon": 114.5220818442,
+      "amount": 7341
+    },
+    {
+      "Gt": 8613254330,
+      "Ssn": 7,
+      "province": "上海",
+      "city": "上海",
+      "lat": 31.24916171,
+      "lon": 121.4878994857,
+      "amount": 7171
+    },
+    {
+      "Gt": 8613090729,
+      "Ssn": 149,
+      "province": "江西",
+      "city": "南昌",
+      "lat": 28.6895780001,
+      "lon": 115.8935275458,
+      "amount": 7146
+    },
+    {
+      "Gt": 8613254333,
+      "Ssn": 7,
+      "province": "上海",
+      "city": "上海",
+      "lat": 31.24916171,
+      "lon": 121.4878994857,
+      "amount": 7130
+    },
+    {
+      "Gt": 8613090171,
+      "Ssn": 149,
+      "province": "山东",
+      "city": "济南",
+      "lat": 36.6827847272,
+      "lon": 117.0249670663,
+      "amount": 7069
+    },
+    {
+      "Gt": 861326010000,
+      "Ssn": 6,
+      "province": "北京",
+      "city": "北京",
+      "lat": 39.9299857781,
+      "lon": 116.3956450379,
+      "amount": 6612
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'dva';
-import { Menu } from 'antd';
+import { Menu, Button } from 'antd';
 import 'antd/lib/menu/style';
 import styles from '../../styles/GlobalHeader.less';
 
@@ -41,7 +41,7 @@ const navItems = [
   {
     key: 'help',
     tlt: '帮 助',
-    link: '/help'
+    link: 'https://github.com/Hungrated/gcnt-vis'
   }
 ];
 
@@ -92,6 +92,9 @@ class GlobalHeader extends PureComponent {
               ))
             }
           </Menu>
+        </div>
+        <div className={styles['m-login']}>
+          <Button type={'primary'}>登 录</Button>
         </div>
       </div>
     );

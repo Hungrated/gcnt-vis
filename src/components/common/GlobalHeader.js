@@ -93,6 +93,9 @@ class GlobalHeader extends PureComponent {
             }
           </Menu>
         </div>
+        <div className={styles['m-manage']}>
+          <Button type={'primary'}>管 理</Button>
+        </div>
         <div className={styles['m-login']}>
           <Button type={'primary'}>登 录</Button>
         </div>

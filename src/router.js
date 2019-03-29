@@ -28,12 +28,12 @@ function RouterConfig ({history, app}) {
     {
       path: '/searchresult',
       models: () => [...commonModels],
-      component: () => require('./routes/HelpPage')
+      component: () => require('./routes/SearchResultPage')
     },
     {
-      path: '/help',
+      path: '/searchdetails',
       models: () => [...commonModels],
-      component: () => require('./routes/HelpPage')
+      component: () => require('./routes/SearchDetailsPage')
     },
     {
       path: '/error',

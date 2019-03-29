@@ -1,7 +1,9 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 
-import styles from '../styles/HelpPage.less';
+import styles from '../styles/SearchResultPage.less';
+
+import SearchResultMap from '../components/search/SearchResultMap';
 
 // const mapStateToProps = ({ help }) => ({
 //   help,
@@ -16,7 +18,7 @@ import styles from '../styles/HelpPage.less';
 //   },
 // });
 
-class HelpPage extends PureComponent {
+class SearchResultPage extends PureComponent {
 
   // componentDidMount () {
   //   this.props.dispatcher.help.fetch();
@@ -25,12 +27,18 @@ class HelpPage extends PureComponent {
   render () {
     return (
       <div className={styles['g-main']}>
+        <div className={styles['g-left']}>
+          <SearchResultMap data={null}/>
+        </div>
+        <div className={styles['g-right']}>
+
+        </div>
       </div>
     );
   }
 }
 
-HelpPage.propTypes = {};
+SearchResultPage.propTypes = {};
 
-// export default connect(mapStateToProps, mapDispatchToProps)(HelpPage);
-export default connect()(HelpPage);
+// export default connect(mapStateToProps, mapDispatchToProps)(SearchResultPage);
+export default connect()(SearchResultPage);

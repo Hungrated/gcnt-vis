@@ -15,7 +15,8 @@ const mapDispatchToProps = dispatch => ({
   dispatch,
   dispatcher: {
     search: {
-      fetch: payload => dispatch({type: 'search/fetch', payload})
+      fetch: payload => dispatch({type: 'search/fetch', payload}),
+      redirect: payload => dispatch({type: 'header/redirect', payload})
     }
   }
 });
@@ -26,9 +27,20 @@ class SearchPage extends PureComponent {
     this.props.dispatcher.search.fetch();
   }
 
+  togglePageRedirect = (link, value) => {
+    // this.setState({
+    //   current: key
+    // });
+    this.props.dispatcher.search.redirect({
+      link: link,
+      params: {
+        value: value
+      }
+    });
+  };
+
   render () {
-    const {search: {data}} = this.props;
-    console.log(data);
+    // const {search: {data}} = this.props;
     return (
       <div className={styles['g-main']}>
         <div className={styles['m-bg']}>
@@ -45,7 +57,7 @@ class SearchPage extends PureComponent {
               placeholder="请输入搜索条件"
               enterButton=" 搜  索 "
               size="large"
-              onSearch={value => console.log(value)}
+              onSearch={value => this.togglePageRedirect('/searchresult', value)}
             />
           </div>
         </div>

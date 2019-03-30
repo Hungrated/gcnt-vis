@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactEcharts from 'echarts-for-react';
 
-const RelationChart = ({data}) => {
+const Chart = ({data}) => {
   const graph = data;
 
   let categories = [];
@@ -89,6 +89,6 @@ const RelationChart = ({data}) => {
   );
 };
 
-RelationChart.propTypes = {};
+Chart.propTypes = {};
 
-export default RelationChart;
+export default Chart;

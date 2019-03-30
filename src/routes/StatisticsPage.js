@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 
-import StatisticsChart from '../components/statistics/RelationChart';
+import HeatChart from '../components/statistics/HeatChart';
 import NationalTop15Chart from '../components/statistics/NationalTop15Chart';
 import ConnectionTop15Chart from '../components/statistics/ConnectionTop15Chart';
 import MscTop15Chart from '../components/statistics/MscTop15Chart';
 import HlrTop15Chart from '../components/statistics/HlrTop15Chart';
+
 import styles from '../styles/StatisticsPage.less';
 
 const mapStateToProps = ({statistics}) => ({
@@ -37,7 +38,7 @@ class StatisticsPage extends PureComponent {
           <ConnectionTop15Chart data={data['connectionTop15Chart']}/>
         </div>
         <div className={styles['g-mid']}>
-          <StatisticsChart data={data['relationChart']}/>
+          <HeatChart data={data['provinceTotalChart']}/>
         </div>
         <div className={styles['g-right']}>
           <MscTop15Chart data={data['mscTop15Chart']}/>

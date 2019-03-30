@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactEcharts from 'echarts-for-react';
 
-import echarts from 'echarts';
+import echarts from 'echarts/lib/echarts';
 
 const Chart = ({data}) => {
 

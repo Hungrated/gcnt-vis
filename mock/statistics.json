@@ -1269,7 +1269,7 @@
       "amount": 6589
     }
   ],
-  "globalTop15Charts": [
+  "globalTop15Chart": [
     {
       "Gt": 8613254815,
       "Ssn": 7,
@@ -1404,6 +1404,168 @@
       "lat": 39.9299857781,
       "lon": 116.3956450379,
       "amount": 6612
+    }
+  ],
+  "provinceTotalChart": [
+    {
+      "province": "上海",
+      "gt_num": 18,
+      "amount": 6717
+    },
+    {
+      "province": "云南",
+      "gt_num": 22,
+      "amount": 2234
+    },
+    {
+      "province": "内蒙古",
+      "gt_num": 38,
+      "amount": 3184
+    },
+    {
+      "province": "北京",
+      "gt_num": 43,
+      "amount": 28696
+    },
+    {
+      "province": "吉林",
+      "gt_num": 33,
+      "amount": 2182
+    },
+    {
+      "province": "四川",
+      "gt_num": 39,
+      "amount": 11293
+    },
+    {
+      "province": "天津",
+      "gt_num": 12,
+      "amount": 1854
+    },
+    {
+      "province": "宁夏",
+      "gt_num": 10,
+      "amount": 17614
+    },
+    {
+      "province": "安徽",
+      "gt_num": 35,
+      "amount": 8837
+    },
+    {
+      "province": "山东",
+      "gt_num": 78,
+      "amount": 7624
+    },
+    {
+      "province": "山西",
+      "gt_num": 49,
+      "amount": 4043
+    },
+    {
+      "province": "广东",
+      "gt_num": 3,
+      "amount": 850
+    },
+    {
+      "province": "广西",
+      "gt_num": 26,
+      "amount": 1550
+    },
+    {
+      "province": "新疆",
+      "gt_num": 32,
+      "amount": 207876
+    },
+    {
+      "province": "江苏",
+      "gt_num": 66,
+      "amount": 45166
+    },
+    {
+      "province": "江西",
+      "gt_num": 22,
+      "amount": 3375
+    },
+    {
+      "province": "河北",
+      "gt_num": 58,
+      "amount": 7055
+    },
+    {
+      "province": "河北省",
+      "gt_num": 10,
+      "amount": 984
+    },
+    {
+      "province": "河南",
+      "gt_num": 56,
+      "amount": 14309
+    },
+    {
+      "province": "浙江",
+      "gt_num": 66,
+      "amount": 10809
+    },
+    {
+      "province": "海南",
+      "gt_num": 6,
+      "amount": 1064
+    },
+    {
+      "province": "湖北",
+      "gt_num": 45,
+      "amount": 19048
+    },
+    {
+      "province": "湖南",
+      "gt_num": 40,
+      "amount": 5822
+    },
+    {
+      "province": "甘肃",
+      "gt_num": 15,
+      "amount": 449906
+    },
+    {
+      "province": "福建",
+      "gt_num": 32,
+      "amount": 3412
+    },
+    {
+      "province": "西藏",
+      "gt_num": 9,
+      "amount": 1256
+    },
+    {
+      "province": "贵州",
+      "gt_num": 17,
+      "amount": 1923
+    },
+    {
+      "province": "辽宁",
+      "gt_num": 52,
+      "amount": 2636
+    },
+    {
+      "province": "重庆",
+      "gt_num": 22,
+      "amount": 3555
+    },
+    {
+      "province": "陕西",
+      "gt_num": 25,
+      "amount": 16110
+    },
+    {
+      "province": "青海",
+      "gt_num": 2,
+      "amount": 3284
+    },
+    {
+      "province": "黑龙江",
+      "gt_num": 38,
+      "amount": 5535
     }
   ]
 }

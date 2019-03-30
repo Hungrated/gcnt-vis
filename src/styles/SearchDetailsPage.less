@@ -1,7 +1,7 @@
 
 .g-main {
   height: 100%;
-  background: #00416b;
+  background: #00314b;
   color: #eeeeee;
   display: flex;
   flex-direction: column;
@@ -15,6 +15,12 @@
       right: 120px;
       bottom: 20px;
     }
+
+    .m-back {
+      position: absolute;
+      left: 120px;
+      bottom: 20px;
+    }
   }
 
   .g-lower {
@@ -23,12 +29,17 @@
     overflow: auto;
     display: flex;
 
-    .g-left, .g-right {
-      flex: 50%;
+    .g-left, .g-right, .g-aside {
+      flex: 40%;
       margin: 20px;
       border: 1px dotted #0073b0;
       border-radius: 3px;
       padding: 20px;
+      transition: all 200ms;
+
+      &:hover {
+        border: 1px solid #9b9b00;
+      }
 
       & > h2 {
         color: yellow;
@@ -36,12 +47,16 @@
       }
 
       & > p {
-        font-size: 18px;
+        font-size: 16px;
       }
     }
 
     .g-right {
       margin-left: 10px;
+    }
+
+    .g-aside {
+      flex: 30%;
     }
   }
 }

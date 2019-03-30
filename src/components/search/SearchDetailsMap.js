@@ -1,25 +1,47 @@
 import React from 'react';
 import styles from '../../styles/OverviewMap.less';
 import ReactEcharts from 'echarts-for-react';
+import echarts from 'echarts/lib/echarts';
 import 'echarts/extension/bmap/bmap';
 
 const OverviewMap = ({data}) => {
 
-  // console.log(data);
-
   const getOption = () => {
 
-    // const convertedData = data.data.map(function (item) {
-    //   return {
-    //     name: `${item.province} - ${item.city}`,
-    //     value: [item.lon, item.lat]
-    //   };
-    // });
+    const scatterData = [
+      {
+        'name': data['city'],
+        'value': [data['src_lon'], data['src_lat'], 3],
+        'symbolSize': 5,
+        'itemStyle': {'normal': {'color': '#F58158'}}
+      },
+      {
+        'name': data['capital'],
+        'value': [data['dest_lon'], data['dest_lat'], 3],
+        'symbolSize': 5,
+        'itemStyle': {'normal': {'color': '#F58158'}}
+      }
+    ];
+
+    const lineData = [
+      {
+        'fromName': data['city'],
+        'toName': data['capital'],
+        'coords': [
+          [data['src_lon'], data['src_lat']],
+          [data['dest_lon'], data['dest_lat']]]
+      }
+    ];
 
     return {
       bmap: {
-        center: [105, 38],
-        zoom: 6,
+        center: [
+          (Number(data['src_lon']) +
+            Number(data['dest_lon'])) / 2 || 105,
+          (Number(data['src_lat']) +
+            Number(data['dest_lat'])) / 2 || 32
+        ],
+        zoom: 4,
         roam: true,
         mapStyle: {
           styleJson: [
@@ -153,33 +175,61 @@ const OverviewMap = ({data}) => {
             }
           ]
         }
-      }
-      // series: [
-      //   {
-      //     type: 'scatter',
-      //     coordinateSystem: 'bmap',
-      //
-      //     itemStyle: {
-      //       color: '#f5fa33'
-      //     },
-      //
-      //     label: {
-      //       normal: {
-      //         formatter: '{b}',
-      //         position: 'right',
-      //         show: false
-      //       },
-      //       emphasis: {
-      //         show: true
-      //       }
-      //     },
-      //
-      //     rippleEffect: {
-      //       brushType: 'stroke'
-      //     },
-      //
-      //     data: convertedData
-      //   }]
+      },
+      series: [
+        {
+          name: '地点',
+          type: 'effectScatter',
+          coordinateSystem: 'bmap',
+          zlevel: 2,
+          rippleEffect: {
+            brushType: 'stroke'
+          },
+          label: {
+            emphasis: {
+              show: true,
+              position: 'right',
+              formatter: '{b}'
+            }
+          },
+          symbolSize: 2,
+          showEffectOn: 'render',
+          itemStyle: {
+            normal: {
+              color: '#46bee9'
+            }
+          },
+          data: scatterData
+        },
+        {
+          name: '线路',
+          type: 'lines',
+          coordinateSystem: 'bmap',
+          zlevel: 2,
+          large: true,
+          effect: {
+            show: true,
+            constantSpeed: 70,
+            symbol: 'pin',
+            symbolSize: 8,
+            trailLength: 0
+          },
+          lineStyle: {
+            normal: {
+              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                {
+                  offset: 0, color: '#58B3CC'
+                }, {
+                  offset: 1, color: '#F58158'
+                }], false),
+              width: 3,
+              opacity: 0.5,
+              curveness: 0.1
+            }
+          },
+          data: lineData
+        }
+      ]
     };
   };
 

@@ -1,17 +1,26 @@
 
 .g-main {
   height: 100%;
-  background: #00416b;
+  background: #00314b;
   color: #eeeeee;
   display: flex;
 
   .g-left {
-    flex: 0 0 40%;
+    flex: 0 0 55%;
     position: relative;
+
+    .m-kw {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #d6d6d6;
+      font-size: 18px;
+      z-index: 5;
+    }
 
     .m-count {
       position: absolute;
-      top: 20px;
+      top: 60px;
       left: 20px;
       color: white;
       font-size: 20px;
@@ -32,13 +41,13 @@
 
     .m-resultitem {
       cursor: pointer;
-      padding: 10px;
+      padding: 10px 30px;
       width: 100%;
       height: 120px;
-      line-height: 50px;
-      border: 1px dotted #0073b0;
+      border: 1px dashed #0073b0;
       border-radius: 3px;
       transition: all 200ms;
+      position: relative;
 
       &:hover {
         border: 1px solid #9b9b00;
@@ -46,6 +55,27 @@
 
       & + .m-resultitem {
         margin-top: 10px;
+      }
+
+      & > p {
+        color: yellow;
+        font-size: 20px;
+      }
+
+      & > span {
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      .m-counttag {
+        display: inline-block;
+        padding: 5px;
+        color: #c8c800;
+        font-size: 16px;
+        line-height: 20px;
+        position: absolute;
+        top: 10px;
+        right: 18px;
       }
     }
 

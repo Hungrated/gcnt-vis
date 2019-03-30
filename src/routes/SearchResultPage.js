@@ -29,7 +29,6 @@ class SearchResultPage extends PureComponent {
   }
 
   handleClick = (e) => {
-    console.log(e.target.getAttribute('data-obj'));
     this.togglePageRedirect('/searchdetails',
       e.target.getAttribute('data-obj'));
   };
@@ -51,35 +50,36 @@ class SearchResultPage extends PureComponent {
 
     const count = zhejiangData.length;
 
-    const pageData = zhejiangData.slice(0, 20);
+    const pageData = zhejiangData.slice(0, 30);
 
     return (
       <div className={styles['g-main']}>
         <div className={styles['g-left']}>
-          <div className={styles['m-count']}>共找到 <span
-            className={styles['m-count-inner']}>{count}</span> 条结果
+          <div className={styles['m-kw']}>
+            关键词：area:zhejiang&category:connection
           </div>
-          <SearchResultMap data={null}/>
+          <div className={styles['m-count']}>共搜索到 <span
+            className={styles['m-count-inner']}>{count}</span> 条结果，
+            每页显示30条
+          </div>
+          <SearchResultMap data={zhejiangData.slice(0, 450)}/>
         </div>
         <div className={styles['g-right']} onClick={this.handleClick}>
           {
             pageData.map(function (item, index) {
               return (
                 <div key={index} className={styles['m-resultitem']}
-                     data-obj={JSON.stringify(data)}>
-                  <h2><strong>源信令点</strong></h2>
-                  <p>国家/地区：中国{item['province']}</p>
-                  <p>城市：{item['city']}</p>
-                  <p>源信令点GT码：{item['callingGt']}</p>
-                  <p>源信令点SSN码：{item['callingSsn']}</p>
-                  <p>地理位置经度：{item['src_lat']}</p>
-                  <p>地理位置纬度：{item['src_lon']}</p>
+                     data-obj={JSON.stringify(item)}>
+                  <p><strong>{index + 1}: {item['callingGt']} 呼出</strong></p>
+                  <span>中国-{item['province']} -&gt; {item['country']}-{item['capital']}</span>
+                  <span
+                    className={styles['m-counttag']}><strong>连接数：{item['amount']}</strong></span>
                 </div>
               );
             })
           }
           <div className={styles['m-pages']}>
-            <Pagination defaultCurrent={1} total={103}/>
+            <Pagination defaultCurrent={1} total={69}/>
           </div>
         </div>
       </div>
@@ -90,4 +90,3 @@ class SearchResultPage extends PureComponent {
 SearchResultPage.propTypes = {};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchResultPage);
-// export default connect()(SearchResultPage);

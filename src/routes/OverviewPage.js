@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 import styles from '../styles/OverviewPage.less';
 
-import OverviewMap1 from '../components/overview/OverviewMap1';
+import OverviewMap from '../components/overview/OverviewMap';
 
 const mapStateToProps = ({overview}) => ({
   overview
@@ -28,7 +28,13 @@ class OverviewPage extends PureComponent {
     return (
       JSON.stringify(data) !== '{}' &&
       <div className={styles['g-main']}>
-        <OverviewMap1 data={data}/>
+        <OverviewMap data={data}/>
+        <div className={styles['g-lower']}>
+          lower
+        </div>
+        <div className={styles['g-aside']}>
+          aside
+        </div>
       </div>
     );
   }

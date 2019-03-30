@@ -1,26 +1,67 @@
 import React from 'react';
-import styles from '../../styles/OverviewMap.less';
 import ReactEcharts from 'echarts-for-react';
+import echarts from 'echarts/lib/echarts';
 import 'echarts/extension/bmap/bmap';
 
 const OverviewMap = ({data}) => {
 
-  console.log(data);
+  let scatterData = [];
+
+  let lineData = [];
+
+  data.data.slice(0, 420).forEach(function(item) {
+    let scatteritem = [
+      {
+        'name': item['city_src'],
+        'value': [item['lon_src'], item['lat_src'], 2],
+        'symbolSize': 5,
+        'itemStyle': {'normal': {'color': '#F58158'}}
+      },
+      {
+        'name': item['city_dest'],
+        'value': [item['lon_dest'], item['lat_dest'], 3],
+        'symbolSize': 5,
+        'itemStyle': {'normal': {'color': '#F58158'}}
+      }
+    ];
+
+    let lineitem = {
+      'fromName': item['city_src'],
+      'toName': item['city_dest'],
+      'coords': [
+        [item['lon_src'], item['lat_src']],
+        [item['lon_dest'], item['lat_dest']]]
+    };
+
+    scatterData.push(...scatteritem);
+    lineData.push(lineitem);
+  });
 
   const getOption = () => {
-
-    const convertedData = data.data.map(function (item) {
-      return {
-        name: `${item.province} - ${item.city}`,
-        value: [item.lon, item.lat]
-      };
-    });
-
-    console.log(convertedData);
-
     return {
+      title: {
+        text: '（国内）节点连接情况总览',
+        left: 'center',
+        top: 20,
+        textStyle: {
+          color: '#ffffff'
+        }
+      },
+      tooltip: {
+        trigger: 'item'
+      },
+      legend: {
+        orient: 'vertical',
+        top: 'bottom',
+        left: 'right',
+        data: [],
+        textStyle: {
+          color: '#fff'
+        },
+        selectedMode: 'single'
+      },
       bmap: {
-        center: [110, 38],
+        center: [116, 35],
         zoom: 6,
         roam: true,
         mapStyle: {
@@ -158,35 +199,63 @@ const OverviewMap = ({data}) => {
       },
       series: [
         {
-          type: 'scatter',
+          name: '地点',
+          type: 'effectScatter',
           coordinateSystem: 'bmap',
-
-          itemStyle: {
-            color: '#f5fa33'
-          },
-
-          label: {
-            normal: {
-              formatter: '{b}',
-              position: 'right',
-              show: false
-            },
-            emphasis: {
-              show: true
-            }
-          },
-
+          zlevel: 2,
           rippleEffect: {
             brushType: 'stroke'
           },
-
-          data: convertedData
-        }]
+          label: {
+            emphasis: {
+              show: true,
+              position: 'right',
+              formatter: '{b}'
+            }
+          },
+          symbolSize: 2,
+          showEffectOn: 'render',
+          itemStyle: {
+            normal: {
+              color: '#46bee9'
+            }
+          },
+          data: scatterData
+        },
+        {
+          name: '线路',
+          type: 'lines',
+          coordinateSystem: 'bmap',
+          zlevel: 2,
+          large: true,
+          effect: {
+            show: true,
+            constantSpeed: 30,
+            symbol: 'pin',
+            symbolSize: 6,
+            trailLength: 0
+          },
+          lineStyle: {
+            normal: {
+              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                {
+                  offset: 0, color: '#58B3CC'
+                }, {
+                  offset: 1, color: '#F58158'
+                }], false),
+              width: 1,
+              opacity: 0.3,
+              curveness: 0.1
+            }
+          },
+          data: lineData
+        }
+      ]
     };
   };
 
   return (
-    <div className={styles['g-map']}>
+    <div>
       <ReactEcharts
         option={getOption()}
         notMerge={true}

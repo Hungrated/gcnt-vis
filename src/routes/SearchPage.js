@@ -37,7 +37,6 @@ class SearchPage extends PureComponent {
   };
 
   render () {
-    // const {search: {data}} = this.props;
     return (
       <div className={styles['g-main']}>
         <div className={styles['m-bg']}>

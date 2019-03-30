@@ -27,7 +27,7 @@ function RouterConfig ({history, app}) {
     },
     {
       path: '/searchresult',
-      models: () => [...commonModels],
+      models: () => [...commonModels, require('./models/SearchResultModel')],
       component: () => require('./routes/SearchResultPage')
     },
     {

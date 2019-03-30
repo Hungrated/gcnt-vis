@@ -6,12 +6,52 @@
   display: flex;
 
   .g-left {
-    flex: 0 0 450px;
+    flex: 0 0 40%;
+    position: relative;
+
+    .m-count {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-size: 20px;
+      z-index: 5;
+
+      .m-count-inner {
+        color: yellow;
+      }
+    }
   }
 
   .g-right {
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
+    padding: 20px;
+    overflow: auto;
+
+    .m-resultitem {
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      height: 120px;
+      line-height: 50px;
+      border: 1px dotted #0073b0;
+      border-radius: 3px;
+      transition: all 200ms;
+
+      &:hover {
+        border: 1px solid #9b9b00;
+      }
+
+      & + .m-resultitem {
+        margin-top: 10px;
+      }
+    }
+
+    .m-pages {
+      text-align: center;
+      margin-top: 30px;
+    }
   }
 }

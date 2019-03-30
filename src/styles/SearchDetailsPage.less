@@ -8,10 +8,40 @@
 
   .g-upper {
     height: 300px;
+    position: relative;
+
+    .m-export {
+      position: absolute;
+      right: 120px;
+      bottom: 20px;
+    }
   }
 
   .g-lower {
-    min-height: 300px;
-    height: calc(100vh - 370px);
+    padding: 35px 100px;
+    min-height: calc(100vh - 370px);
+    overflow: auto;
+    display: flex;
+
+    .g-left, .g-right {
+      flex: 50%;
+      margin: 20px;
+      border: 1px dotted #0073b0;
+      border-radius: 3px;
+      padding: 20px;
+
+      & > h2 {
+        color: yellow;
+        margin-bottom: 20px;
+      }
+
+      & > p {
+        font-size: 18px;
+      }
+    }
+
+    .g-right {
+      margin-left: 10px;
+    }
   }
 }

@@ -28,9 +28,6 @@ class SearchPage extends PureComponent {
   }
 
   togglePageRedirect = (link, value) => {
-    // this.setState({
-    //   current: key
-    // });
     this.props.dispatcher.search.redirect({
       link: link,
       params: {

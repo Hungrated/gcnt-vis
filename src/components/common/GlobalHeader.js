@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 import { Menu, Button } from 'antd';
 import 'antd/lib/menu/style';
+import 'antd/lib/button/style';
 import styles from '../../styles/GlobalHeader.less';
 
 const mapStateToProps = ({header}) => ({

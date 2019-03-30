@@ -15,3 +15,7 @@ export async function queryStatisticsChartData () {
 export async function searchWithParams () {
   return request('/mock/statistics.json');
 }
+
+export async function getSearchResult () {
+  return request('/mock/searchresult.json');
+}

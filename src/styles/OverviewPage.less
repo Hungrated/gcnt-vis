@@ -9,28 +9,70 @@
 
   .g-lower {
     position: absolute;
-    width: 70%;
+    margin: 20px;
     height: 100px;
-    bottom: 20px;
-    left: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 5px;
   }
 
   .g-aside {
     position: absolute;
     width: 26%;
-    height: 94%;
-    bottom: 20px;
+    top: 10px;
+    bottom: 130px;
     right: 20px;
   }
 
   .g-lower, .g-aside {
-    cursor: pointer;
+    font-size: 15px;
+    color: white;
     border: 2px dashed #0073b0;
     border-radius: 5px;
     transition: all 200ms;
+    text-align: justify;
 
     &:hover {
       border: 2px solid #9b9b00;
+    }
+
+    .m-dataitem, .m-dataitem2 {
+      display: inline-block;
+      width: 120px;
+      vertical-align: middle;
+
+      .digit, .sub, .area {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+      }
+
+      .digit {
+        color: yellow;
+        font-size: 40px;
+        line-height: 55px;
+      }
+
+      .sub {
+        color: #cdcdcd;
+        font-size: 14px;
+      }
+
+      & + .m-dataitem {
+        margin-left: 10px;
+      }
+    }
+
+    .m-dataitem2 {
+      width: 230px;
+      margin-left: 10px;
+
+      .area {
+        color: yellow;
+        font-size: 24px;
+        line-height: 55px;
+      }
     }
   }
 }

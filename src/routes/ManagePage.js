@@ -9,7 +9,6 @@ class ManagePage extends PureComponent {
 
   state = {
     userList: [
-      {name: 'admin'},
       {name: 'user1'},
       {name: 'user2'},
       {name: 'user3'},

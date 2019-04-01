@@ -102,7 +102,7 @@ const Chart = ({data}) => {
         option={getOption()}
         notMerge={true}
         lazyUpdate={true}
-        style={{width: '100%', height: 'calc(100vh - 270px)'}}
+        style={{width: '100%', height: 'calc(100vh - 70px)'}}
       />
     </div>
   );

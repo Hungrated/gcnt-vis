@@ -36,6 +36,11 @@ function RouterConfig ({history, app}) {
       component: () => require('./routes/SearchDetailsPage')
     },
     {
+      path: '/manage',
+      models: () => [...commonModels],
+      component: () => require('./routes/ManagePage')
+    },
+    {
       path: '/error',
       models: () => [...commonModels],
       component: () => require('./routes/ErrorPage')

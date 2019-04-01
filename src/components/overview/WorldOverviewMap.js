@@ -14,25 +14,25 @@ const WorldOverviewMap = ({data}) => {
   data.slice(0, 400).forEach(function (item) {
     let scatteritem = [
       {
-        'name': item['city_src'],
-        'value': [item['lon_src'], item['lat_src'], 0],
+        'name': item['city'],
+        'value': [item['src_lon'], item['src_lat'], 0],
         'symbolSize': 3,
         'itemStyle': {'normal': {'color': '#cece1c'}}
       },
       {
-        'name': item['city_dest'],
-        'value': [item['lon_dest'], item['lat_dest'], 0],
+        'name': item['capital'],
+        'value': [item['dest_lon'], item['dest_lat'], 0],
         'symbolSize': 3,
         'itemStyle': {'normal': {'color': '#cece1c'}}
       }
     ];
 
     let lineitem = {
-      'fromName': item['city_src'],
-      'toName': item['city_dest'],
+      'fromName': item['city'],
+      'toName': item['capital'],
       'coords': [
-        [item['lon_src'], item['lat_src']],
-        [item['lon_dest'], item['lat_dest']]]
+        [item['src_lon'], item['src_lat']],
+        [item['dest_lon'], item['dest_lat']]]
     };
 
     scatterData.push(...scatteritem);
@@ -93,6 +93,7 @@ const WorldOverviewMap = ({data}) => {
       globe: {
         baseTexture: mapChart,
         shading: 'color',
+        globeRadius: 200,
         light: { // 光照阴影
           main: {
             color: '#ababab', // 光照颜色
@@ -170,7 +171,7 @@ const WorldOverviewMap = ({data}) => {
         notMerge={true}
         lazyUpdate={true}
         style={{
-          width: '75%',
+          width: '73%',
           height: 'calc(100vh - 70px)',
           background: '#00314b'
         }}

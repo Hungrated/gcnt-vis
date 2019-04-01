@@ -124,7 +124,13 @@ class GlobalHeader extends PureComponent {
           </Menu>
         </div>
         <div className={styles['m-manage']}>
-          <Button type={'primary'}>管 理</Button>
+          <Button type={'primary'}
+                  onClick={() => {
+                    this.props.dispatcher.header.redirect({
+                      link: '/manage',
+                      params: {}
+                    });
+                  }}>管 理</Button>
         </div>
         <div className={styles['m-login']}>
           {
@@ -139,11 +145,13 @@ class GlobalHeader extends PureComponent {
           visible={this.state.modalVisible}
           onOk={this.handleLogin}
           onCancel={this.handleCancel}
+          okText="登 录"
+          cancelText="取 消"
         >
           用户名：
-          <input />&emsp;
+          <input/>&emsp;
           口令：
-          <input />
+          <input/>
         </Modal>
       </div>
     );

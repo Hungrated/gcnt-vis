@@ -2,9 +2,14 @@ import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 import styles from '../styles/OverviewPage.less';
 
+import { Button } from 'antd';
+import 'antd/lib/button/style';
+
 import OverviewMap from '../components/overview/OverviewMap';
-import NodeCountTop15Chart from '../components/overview/NodeCountTop15Chart'
-import ConnectionCountTop15Chart from '../components/overview/ConnectionCountTop15Chart'
+import WorldOverviewMap from '../components/overview/WorldOverviewMap';
+import NodeCountTop15Chart from '../components/overview/NodeCountTop15Chart';
+import ConnectionCountTop15Chart
+  from '../components/overview/ConnectionCountTop15Chart';
 
 const mapStateToProps = ({overview}) => ({
   overview
@@ -21,9 +26,19 @@ const mapDispatchToProps = dispatch => ({
 
 class OverviewPage extends PureComponent {
 
+  state = {
+    mode: 0
+  };
+
   componentDidMount () {
     this.props.dispatcher.overview.fetch();
   }
+
+  setMode = (mode) => {
+    this.setState({
+      mode: mode
+    });
+  };
 
   render () {
     const {overview: {data}} = this.props;
@@ -35,7 +50,15 @@ class OverviewPage extends PureComponent {
     return (
       JSON.stringify(data) !== '{}' &&
       <div className={styles['g-main']}>
-        <OverviewMap data={data.data}/>
+        <div className={styles['m-buttons']}>
+          <Button type={'primary'} onClick={this.setMode(0)}>国 内</Button>
+          <Button type={'primary'} onClick={this.setMode(1)}>海 外</Button>
+        </div>
+        {
+          this.state.mode === 0
+            ? (<OverviewMap data={data.data}/>)
+            : (<WorldOverviewMap data={data['worldData']}/>)
+        }
         <div className={styles['g-lower']}>
           {
             totalDataKeys.slice(0, 7).map(function (item) {

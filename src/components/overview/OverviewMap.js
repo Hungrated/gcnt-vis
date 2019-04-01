@@ -9,7 +9,7 @@ const OverviewMap = ({data}) => {
 
   let lineData = [];
 
-  data.slice(0, 420).forEach(function(item) {
+  data.slice(0, 400).forEach(function(item) {
     let scatteritem = [
       {
         'name': item['city_src'],
@@ -41,7 +41,7 @@ const OverviewMap = ({data}) => {
     return {
       title: {
         text: '（国内）节点连接情况总览',
-        left: 'center',
+        left: 20,
         top: 30,
         textStyle: {
           color: '#ffffff'
@@ -62,7 +62,7 @@ const OverviewMap = ({data}) => {
       },
       bmap: {
         center: [116, 35],
-        zoom: 6,
+        zoom: 7,
         roam: true,
         mapStyle: {
           styleJson: [

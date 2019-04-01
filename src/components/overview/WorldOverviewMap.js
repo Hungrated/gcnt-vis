@@ -11,7 +11,7 @@ const WorldOverviewMap = ({data}) => {
 
   let lineData = [];
 
-  data.slice(0, 400).forEach(function (item) {
+  data.slice(0, 5000).forEach(function (item) {
     let scatteritem = [
       {
         'name': item['city'],
@@ -154,8 +154,7 @@ const WorldOverviewMap = ({data}) => {
           lineStyle: {
             width: 1,
             color: 'rgb(50, 50, 150)',
-            // color: 'rgb(118, 233, 241)',
-            opacity: 0.1
+            opacity: 0.05
           },
           blendMode: 'lighter',
           data: lineData,

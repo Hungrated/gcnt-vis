@@ -27,7 +27,7 @@ const mapDispatchToProps = dispatch => ({
 class OverviewPage extends PureComponent {
 
   state = {
-    mode: 0
+    mode: 1
   };
 
   componentDidMount () {
@@ -58,8 +58,8 @@ class OverviewPage extends PureComponent {
         </div>
         {
           this.state.mode === 0
-            ? (<OverviewMap data={data.data}/>)
-            : (<WorldOverviewMap data={data['worldData']}/>)
+            ? (<OverviewMap data={data.data || []}/>)
+            : (<WorldOverviewMap data={data['worldData'] || []}/>)
         }
         <div className={styles['g-lower']}>
           {

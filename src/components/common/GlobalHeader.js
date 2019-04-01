@@ -1,8 +1,9 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'dva';
-import { Menu, Button } from 'antd';
+import { Button, Menu, Modal } from 'antd';
 import 'antd/lib/menu/style';
 import 'antd/lib/button/style';
+import 'antd/lib/modal/style';
 import styles from '../../styles/GlobalHeader.less';
 
 const mapStateToProps = ({header}) => ({
@@ -49,7 +50,9 @@ const navItems = [
 class GlobalHeader extends PureComponent {
 
   state = {
-    current: window.location.pathname.substring(1) || 'overview'
+    current: window.location.pathname.substring(1) || 'overview',
+    modalVisible: false,
+    isLogin: false
   };
 
   togglePageRedirect = (key, link) => {
@@ -69,6 +72,32 @@ class GlobalHeader extends PureComponent {
     } else {
       this.togglePageRedirect(e.key, link);
     }
+  };
+
+  showModal = () => {
+    this.setState({
+      modalVisible: true
+    });
+  };
+
+  handleLogin = (e) => {
+    this.setState({
+      isLogin: true,
+      modalVisible: false
+    });
+  };
+
+  handleLogout = (e) => {
+    this.setState({
+      isLogin: false,
+      modalVisible: false
+    });
+  };
+
+  handleCancel = (e) => {
+    this.setState({
+      modalVisible: false
+    });
   };
 
   render () {
@@ -98,8 +127,24 @@ class GlobalHeader extends PureComponent {
           <Button type={'primary'}>管 理</Button>
         </div>
         <div className={styles['m-login']}>
-          <Button type={'primary'}>注销 Admin</Button>
+          {
+            this.state.isLogin
+              ? (<Button type={'primary'} onClick={this.handleLogout}>注销
+                admin</Button>)
+              : (<Button type={'primary'} onClick={this.showModal}>登 录</Button>)
+          }
         </div>
+        <Modal
+          title="登录系统"
+          visible={this.state.modalVisible}
+          onOk={this.handleLogin}
+          onCancel={this.handleCancel}
+        >
+          用户名：
+          <input />&emsp;
+          口令：
+          <input />
+        </Modal>
       </div>
     );
   }

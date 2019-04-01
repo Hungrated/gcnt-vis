@@ -61,8 +61,8 @@ const OverviewMap = ({data}) => {
         selectedMode: 'single'
       },
       bmap: {
-        center: [116, 35],
-        zoom: 7,
+        center: [120, 38],
+        zoom: 6,
         roam: true,
         mapStyle: {
           styleJson: [

@@ -34,7 +34,7 @@ class OverviewPage extends PureComponent {
     this.props.dispatcher.overview.fetch();
   }
 
-  setMode = (mode) => {
+  setMode (mode) {
     this.setState({
       mode: mode
     });
@@ -51,8 +51,10 @@ class OverviewPage extends PureComponent {
       JSON.stringify(data) !== '{}' &&
       <div className={styles['g-main']}>
         <div className={styles['m-buttons']}>
-          <Button type={'primary'} onClick={this.setMode(0)}>国 内</Button>
-          <Button type={'primary'} onClick={this.setMode(1)}>海 外</Button>
+          <Button type={'primary'} onClick={() => {this.setMode(0);}}>国
+            内</Button>
+          <Button type={'primary'} onClick={() => {this.setMode(1);}}>海
+            外</Button>
         </div>
         {
           this.state.mode === 0
